@@ -1,0 +1,51 @@
+@font-face {
+ font-family: "main";
+ src: url("fonts/Satoshi-Black.otf");
+}
+
+
+body {
+    background-color: rgb(128,128,128);
+}
+
+#startDiv {
+    text-align: center;
+}
+
+#start {
+    background-color: rgb(190, 190, 190); 
+    font-family: "main";
+    font-size: x-large;
+}
+
+#search {
+    background-color: rgb(190, 190, 190);
+    font-family: "main";
+}
+#button {
+    background-color: rgb(190, 190, 190); 
+    font-family: "main";
+}
+
+#error {
+    font-family: "main";
+    min-height: 22px;
+}
+
+#label {
+    word-spacing: 80px;
+}
+
+.guess {
+    text-align: center;
+    font-family: "main";
+    word-spacing: 80px;
+}
+
+#logo {
+    text-align: center;
+    padding: 20px;
+}
+#divTwo {
+    text-align: center;
+}
