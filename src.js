@@ -122,21 +122,9 @@ function found(song) {
 
 function compare(songGuessed, correctSong, albumGuessed, correctAlbum) {
         let temp = new Point();
-        if (correctAlbum>albumGuessed) {
-            temp.x=0;
-        }
-        else if (correctAlbum==albumGuessed) {
-            temp.x=100;
-        }
-        else {temp.x=1;}
-
-        if (correctSong>songGuessed) {
-            temp.y=0;
-        }
-        else if (correctSong==songGuessed) {
-            temp.y=100;
-        }
-        else {temp.y=1;}
+        
+        temp.x = correctAlbum-albumGuessed;
+        temp.y = correctSong-songGuessed;
 
         return temp;
     }
@@ -180,25 +168,40 @@ function validSong(userSong, info) {
 
     let albumHint = "";
     let trackHint = "";
-    if (comparaison.x == 0) {
-        albumHint = "Higher";
-    }
-    else if (comparaison.x == 100) {
-        albumHint = "Correct";
-    }
-    else {albumHint = "Lower";}
+    let albumColour = "";
+    let trackColour = "";
 
-    if (comparaison.y == 0) {
-        trackHint = "Higher";
+    if (comparaison.x > 0) {
+        albumHint = "images/fleche2.png";
     }
-    else if (comparaison.y == 100) {
-        trackHint = "Correct";
+    else if (comparaison.x == 0) {
+        albumHint = "images/check.png";
+        albumColour = "green"
     }
-    else {trackHint = "Lower";}
+    else {albumHint = "images/fleche.png";}
+
+    if (comparaison.y > 0) {
+        trackHint = "images/fleche2.png";
+    }
+    else if (comparaison.y == 0) {
+        trackHint = "images/check.png";
+        trackColour = "green"
+    }
+    else {trackHint = "images/fleche.png";}
+
+    if (Math.abs(comparaison.x) <3 && Math.abs(comparaison.x)>0) {
+        albumColour = "yellow";
+    }
+
+    if (Math.abs(comparaison.y) <3 && Math.abs(comparaison.y)>0) {
+        trackColour = "yellow";
+    }
 
     if (counter<10) {
-        document.getElementById(guesses[counter]).innerHTML = userSong + "<img src='" + albums[albumNumberG-1].albumLink + "'> <img>" + trackNumberG + "<img>";
+        document.getElementById(guesses[counter]).innerHTML = "<span class='song'>" + userSong + "</span>" + "<span class='album'><img src='" + albums[albumNumberG-1].albumLink + "'></span>" + "<span class='arrow' id='arrow" + counter + "'><img src='" + albumHint + "'></span>" + "<span class='track'>" + trackNumberG + "</span>" + "<span class='arrow2' id='arrow" + counter + "2'><img src='" + trackHint + "'></span>";
         document.getElementById(guesses[counter]).style.display="block";
+        document.querySelector("#arrow" + counter + " img").style.backgroundColor = albumColour;
+        document.querySelector("#arrow" + counter + "2 img").style.backgroundColor = trackColour;
         if (userSong === randSong) {
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";

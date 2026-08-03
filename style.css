@@ -8,7 +8,16 @@ body {
     background-color: rgb(128,128,128);
 }
 
+#logo {
+    text-align: center;
+    padding: 20px;
+}
+
 #startDiv {
+    text-align: center;
+}
+
+#divTwo {
     text-align: center;
 }
 
@@ -33,19 +42,53 @@ body {
 }
 
 #label {
-    word-spacing: 80px;
+    word-spacing: 120px;
+    position: relative;
+    left: 7px;
 }
 
 .guess {
     text-align: center;
     font-family: "main";
-    word-spacing: 80px;
+    position: relative;
+    height: 40px;
 }
 
-#logo {
-    text-align: center;
-    padding: 20px;
+.song {
+    position: absolute;
+    left: 36.5%;
+    transform: translateX(-50%);
 }
-#divTwo {
-    text-align: center;
+
+.album {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12px;
 }
+
+.album img {
+    height: 50px;
+}
+
+.arrow {
+    position: absolute;
+    left: 53.2%;
+    transform: translateX(-50%);
+    top: 5px;
+}
+
+.track {
+    position: absolute;
+    right: 36%;
+    transform: translateX(+50%);
+}
+
+.arrow2 {
+    position: absolute;
+    left: 65.8%;
+    transform: translateX(-50%);
+    top: 2px;
+}
+
+
