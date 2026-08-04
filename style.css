@@ -21,7 +21,7 @@ body {
     text-align: center;
 }
 
-#start {
+.start {
     background-color: rgb(190, 190, 190); 
     font-family: "main";
     font-size: x-large;
@@ -41,10 +41,21 @@ body {
     min-height: 22px;
 }
 
-#label {
-    word-spacing: 120px;
-    position: relative;
-    left: 7px;
+#songLabel {
+    position: absolute;
+    left: 36.5%;
+    transform: translateX(-50%);
+
+}
+#albumLabel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#trackLabel {
+    position: absolute;
+    right: 36%;
+    transform: translateX(+50%);
 }
 
 .guess {
@@ -73,7 +84,7 @@ body {
 
 .arrow {
     position: absolute;
-    left: 53.2%;
+    left: 54.2%;
     transform: translateX(-50%);
     top: 5px;
 }
@@ -86,9 +97,13 @@ body {
 
 .arrow2 {
     position: absolute;
-    left: 65.8%;
+    left: 66.8%;
     transform: translateX(-50%);
     top: 2px;
+}
+
+#againDiv {
+    text-align: center;
 }
 
 

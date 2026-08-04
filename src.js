@@ -103,7 +103,41 @@ const userGuesses = [];
 
 let counter = 0;
 
+let randSong = null;
+let songInfo = null;
+let albumNumber = null;
+let trackNumber = null;
+let daily = false;
+
+function startDaily() {
+    daily = true;
+    start();
+}
+
+function startUnlimited() {
+    start();
+}
+
+function startAgain() {
+    for (let i=0;i<10;i++) {
+        document.getElementById(guesses[i]).style.display="none";
+    }
+    document.getElementById("startAgain").style.display="none";
+    document.getElementById("result").style.display="none";
+    startUnlimited();
+}
+
+
 function start() {
+    if (daily) {
+        randSong = songs[0];
+        songInfo = found(randSong);
+    }
+
+    else {
+        randSong = songs[Math.floor(Math.random()*songs.length)];
+        songInfo = found(randSong);
+    }
     document.getElementById("divTwo").style.visibility="visible";
     document.getElementById("startDiv").style.display="none";
     document.getElementById("label").style.display="block";
@@ -129,18 +163,12 @@ function compare(songGuessed, correctSong, albumGuessed, correctAlbum) {
         return temp;
     }
 
-let randSong = songs[Math.floor(Math.random()*songs.length)];
-let songInfo = found(randSong);
-let albumNumber = songInfo.x;
-let trackNumber = songInfo.y;
-
-
-
 function read() { 
     let userSong = document.getElementById("search").value;
-    let info = found(userSong);
+    let info=found(userSong);
+
     if (info != null && !userGuesses.includes(userSong)) {
-        validSong(userSong, info);
+        validSong(userSong, songInfo);
         document.getElementById("search").value="";
     }
     
@@ -158,11 +186,14 @@ function read() {
 
 }
 
-function validSong(userSong, info) {
-    userGuesses.push(userSong)
+function validSong(userSong, songInfo) {
     document.getElementById("error").style.visibility="hidden";
+    userGuesses.push(userSong);
+    let info = found(userSong);
     let albumNumberG = info.x;
     let trackNumberG = info.y;
+    albumNumber = songInfo.x;
+    trackNumber = songInfo.y;
 
     let comparaison = compare(trackNumberG, trackNumber, albumNumberG, albumNumber);
 
@@ -206,6 +237,9 @@ function validSong(userSong, info) {
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
+            if (!daily) {
+                document.getElementById("startAgain").style.display="inline-block";
+            }
         }
         else {
             counter++;  

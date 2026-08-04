@@ -13,7 +13,8 @@
 </div>
 
 <div id="startDiv">
-<button onclick=start() id="start">Play Daily</button>
+<button onclick=startDaily() class="start">Play Daily</button>
+<button onclick=startUnlimited() class="start">Play Unlimited</button>
 </div>
 
 <div id="divTwo" style="visibility: hidden">
@@ -24,7 +25,7 @@
 </div>
 
 
-<p class = "guess" id="label" style="display:none">Song Album Track#</p>
+<p class = "guess" id="label" style="display:none"><span id="songLabel">Song</span><span id="albumLabel">Album</span><span id="trackLabel">Track#</span></p>
 
 
 <p class = "guess" id="g1" style="display:none">  </p>
@@ -39,6 +40,9 @@
 <p class = "guess" id="g10" style="display:none">  </p>
 <p class = "guess" id="result" style="display:none">  </p>
 
+<div id="againDiv">
+<button onclick=startAgain() class="start" id="startAgain" style="display: none;">Play Again?</button>
+</div>
 
 <script src=src.js> </script> 
 </body>
