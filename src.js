@@ -15,65 +15,65 @@ class Album {
 
 const songs = [
 
-    "Lust For Life", "Houstatlantavegas", "Successful", "Let's Call It Off", "November 18th", "Ignant Shit", "A Night Off", "Say What's Real", "Little Bit", "Best I Ever Had", "Unstoppable", "Uptown", "Sooner Than Later", "Bria's Interlude", "The Calm", "Brand New", "Congratulations", 
+    "LUST FOR LIFE", "HOUSTATLANTAVEGAS", "SUCCESSFUL", "LET'S CALL IT OFF", "NOVEMBER 18TH", "IGNANT SHIT", "A NIGHT OFF", "SAY WHAT'S REAL", "LITTLE BIT", "BEST I EVER HAD", "UNSTOPPABLE", "UPTOWN", "SOONER THAN LATER", "BRIA'S INTERLUDE", "THE CALM", "BRAND NEW", "CONGRATULATIONS",
 
-    "Fireworks", "Karaoke", "The Resistance", "Over", "Show Me a Good Time", "Up All Night", "Fancy", "Shut It Down", "Unforgettable", "Light Up", "Miss Me", "Cece's Interlude", "Find Your Love", "Thank Me Now", 
+    "FIREWORKS", "KARAOKE", "THE RESISTANCE", "OVER", "SHOW ME A GOOD TIME", "UP ALL NIGHT", "FANCY", "SHUT IT DOWN", "UNFORGETTABLE", "LIGHT UP", "MISS ME", "CECE'S INTERLUDE", "FIND YOUR LOVE", "THANK ME NOW",
 
-    "Over My Dead Body", "Shot for Me", "Headlines", "Crew Love", "Take Care", "Marvins Room", "Buried Alive Interlude", "Under Ground Kings", "We'll Be Fine", "Make Me Proud", "Lord Knows", "Cameras", "Doing It Wrong", "The Real Her", "Look What You've Done", "HYFR", "Practice", "The Ride", 
+    "OVER MY DEAD BODY", "SHOT FOR ME", "HEADLINES", "CREW LOVE", "TAKE CARE", "MARVINS ROOM", "BURIED ALIVE INTERLUDE", "UNDER GROUND KINGS", "WE'LL BE FINE", "MAKE ME PROUD", "LORD KNOWS", "CAMERAS", "DOING IT WRONG", "THE REAL HER", "LOOK WHAT YOU'VE DONE", "HYFR", "PRACTICE", "THE RIDE",
 
-    "Tuscan Leather", "Furthest Thing", "Started From the Bottom", "Wu-Tang Forever", "Own It", "Worst Behavior", "From Time", "Hold On, We're Going Home", "Connect", "The Language", "305 To My City", "Too Much", "Pound Cake", "Come Thru", "All Me", 
+    "TUSCAN LEATHER", "FURTHEST THING", "STARTED FROM THE BOTTOM", "WU-TANG FOREVER", "OWN IT", "WORST BEHAVIOR", "FROM TIME", "HOLD ON, WE'RE GOING HOME", "CONNECT", "THE LANGUAGE", "305 TO MY CITY", "TOO MUCH", "POUND CAKE", "COME THRU", "ALL ME",
 
-    "Legend", "Energy", "10 Bands", "Know Yourself", "No Tellin'", "Madonna", "6 God", "Star67", "Preach", "Wednesday Night Interlude", "Used To", "6 Man", "Now & Forever", "Company", "You & The 6", "Jungle", "6pm in New York", 
+    "LEGEND", "ENERGY", "10 BANDS", "KNOW YOURSELF", "NO TELLIN'", "MADONNA", "6 GOD", "STAR67", "PREACH", "WEDNESDAY NIGHT INTERLUDE", "USED TO", "6 MAN", "NOW & FOREVER", "COMPANY", "YOU & THE 6", "JUNGLE", "6PM IN NEW YORK",
 
-    "Digital Dash", "Big Rings", "Live From The Gutter", "Diamonds Dancing", "Scholarships", "Plastic Bag", "I'm The Plug", "Change Locations", "Jumpman", "Jersey", "30 for 30 Freestyle", 
+    "DIGITAL DASH", "BIG RINGS", "LIVE FROM THE GUTTER", "DIAMONDS DANCING", "SCHOLARSHIPS", "PLASTIC BAG", "I'M THE PLUG", "CHANGE LOCATIONS", "JUMPMAN", "JERSEY", "30 FOR 30 FREESTYLE",
 
-    "Keep the Family Close", "9", "U With Me?", "Feel No Ways", "Hype", "Weston Road Flows", "Redemption", "With You", "Faithful", "Still Here", "Controlla", "One Dance", "Grammys", "Child's Play", "Pop Style", "Too Good", "Summers Over Interlude", "Fire & Desire", "Views", "Hotline Bling", 
+    "KEEP THE FAMILY CLOSE", "9", "U WITH ME?", "FEEL NO WAYS", "HYPE", "WESTON ROAD FLOWS", "REDEMPTION", "WITH YOU", "FAITHFUL", "STILL HERE", "CONTROLLA", "ONE DANCE", "GRAMMYS", "CHILD'S PLAY", "POP STYLE", "TOO GOOD", "SUMMERS OVER INTERLUDE", "FIRE & DESIRE", "VIEWS", "HOTLINE BLING",
 
-    "Free Smoke", "No Long Talk", "Passionfruit", "Jorja Interlude", "Get It Together", "Madiba Riddim", "Blem", "4422", "Gyalchester", "Skepta Interlude", "Portland", "Sacrifices", "Nothings Into Somethings", "Teenage Fever", "KMT", "Lose You", "Can't Have Everything", "Glow", "Since Way Back", "Fake Love", "Ice Melts", "Do Not Disturb", 
+    "FREE SMOKE", "NO LONG TALK", "PASSIONFRUIT", "JORJA INTERLUDE", "GET IT TOGETHER", "MADIBA RIDDIM", "BLEM", "4422", "GYALCHESTER", "SKEPTA INTERLUDE", "PORTLAND", "SACRIFICES", "NOTHINGS INTO SOMETHINGS", "TEENAGE FEVER", "KMT", "LOSE YOU", "CAN'T HAVE EVERYTHING", "GLOW", "SINCE WAY BACK", "FAKE LOVE", "ICE MELTS", "DO NOT DISTURB",
 
-    "Survival", "Nonstop", "Elevate", "Emotionless", "God's Plan", "I'm Upset", "8 Out of 10", "Mob Ties", "Can't Take a Joke", "Sandra's Rose", "Talk Up", "Is There More", "Peak", "Summer Games", "Jaded", "Nice For What", "Finesse", "Ratchet Happy Birthday", "That's How You Feel", "Blue Tint", "In My Feelings", "Don't Matter To Me", "After Dark", "Final Fantasy", "March 14", 
+    "SURVIVAL", "NONSTOP", "ELEVATE", "EMOTIONLESS", "GOD'S PLAN", "I'M UPSET", "8 OUT OF 10", "MOB TIES", "CAN'T TAKE A JOKE", "SANDRA'S ROSE", "TALK UP", "IS THERE MORE", "PEAK", "SUMMER GAMES", "JADED", "NICE FOR WHAT", "FINESSE", "RATCHET HAPPY BIRTHDAY", "THAT'S HOW YOU FEEL", "BLUE TINT", "IN MY FEELINGS", "DON'T MATTER TO ME", "AFTER DARK", "FINAL FANTASY", "MARCH 14", 
 
-    "Dreams Money Can Buy", "The Motion", "How Bout Now", "Trust Issues", "Days in the East", "Draft Day", "4PM in Calabasas", "5AM in Toronto", "I Get Lonely", "My Side", "Jodeci Freestyle", "Club Paradise", "Free Spirit", "Heat of the Moment", "Girls Love Beyoncé", "Paris Morton Music", "Can I", 
+    "DREAMS MONEY CAN BUY", "THE MOTION", "HOW BOUT NOW", "TRUST ISSUES", "DAYS IN THE EAST", "DRAFT DAY", "4PM IN CALABASAS", "5AM IN TORONTO", "I GET LONELY", "MY SIDE", "JODECI FREESTYLE", "CLUB PARADISE", "FREE SPIRIT", "HEAT OF THE MOMENT", "GIRLS LOVE BEYONCÉ", "PARIS MORTON MUSIC", "CAN I", 
 
-    "Deep Pockets", "When To Say When", "Chicago Freestyle", "Not You Too", "Toosie Slide", "Desires", "Time Flies", "Landed", "D4L", "Pain 1993", "Losses", "From Florida With Love", "Demons", "War", 
+    "DEEP POCKETS", "WHEN TO SAY WHEN", "CHICAGO FREESTYLE", "NOT YOU TOO", "TOOSIE SLIDE", "DESIRES", "TIME FLIES", "LANDED", "D4L", "PAIN 1993", "LOSSES", "FROM FLORIDA WITH LOVE", "DEMONS", "WAR", 
 
-    "Champagne Poetry", "Papi's Home", "Girls Want Girls", "In The Bible", "Love All", "Fair Trade", "Way 2 Sexy", "TSU", "N 2 Deep", "Pipe Down", "Yebba's Heartbreak", "No Friends In The Industry", "Knife Talk", "7am on Bridle Path", "Race My Mind", "Fountains", "Get Along Better", "You Only Live Twice", "IMY2", "F*****g Fans", "The Remorse", 
+    "CHAMPAGNE POETRY", "PAPI'S HOME", "GIRLS WANT GIRLS", "IN THE BIBLE", "LOVE ALL", "FAIR TRADE", "WAY 2 SEXY", "TSU", "N 2 DEEP", "PIPE DOWN", "YEBBA'S HEARTBREAK", "NO FRIENDS IN THE INDUSTRY", "KNIFE TALK", "7AM ON BRIDLE PATH", "RACE MY MIND", "FOUNTAINS", "GET ALONG BETTER", "YOU ONLY LIVE TWICE", "IMY2", "F*****G FANS", "THE REMORSE", 
 
-    "Intro", "Falling Back", "Texts Go Green", "Currents", "A Keeper", "Calling My Name", "Sticky", "Massive", "Flight's Booked", "Overdrive", "Down Hill", "Tie That Binds", "Liability", "Jimmy Cooks", 
+    "INTRO", "FALLING BACK", "TEXTS GO GREEN", "CURRENTS", "A KEEPER", "CALLING MY NAME", "STICKY", "MASSIVE", "FLIGHT'S BOOKED", "OVERDRIVE", "DOWN HILL", "TIE THAT BINDS", "LIABILITY", "JIMMY COOKS", 
 
-    "Rich Flex", "Major Distribution", "On BS", "BackOutsideBoyz", "Privileged Rappers", "Spin Bout U", "Hours In Silence", "Treacherous Twins", "Circo Loco", "Pussy & Millions", "Broke Boys", "Middle of the Ocean", "Jumbotron Shit Poppin", "More M's", "3AM on Glenwood", "I Guess It's Fuck Me", 
+    "RICH FLEX", "MAJOR DISTRIBUTION", "ON BS", "BACKOUTSIDEBOYZ", "PRIVILEGED RAPPERS", "SPIN BOUT U", "HOURS IN SILENCE", "TREACHEROUS TWINS", "CIRCO LOCO", "PUSSY & MILLIONS", "BROKE BOYS", "MIDDLE OF THE OCEAN", "JUMBOTRON SHIT POPPIN", "MORE M'S", "3AM ON GLENWOOD", "I GUESS IT'S FUCK ME", 
 
-    "Virginia Beach", "Amen", "Calling For You", "Fear of Heights", "Daylight", "First Person Shooter", "IDGAF", "7969 Santa", "Slime You Out", "Bahamas Promises", "Tried Our Best", "Screw the World", "Drew a Picasso", "Members Only", "What Would Pluto Do", "All the Parties", "8AM in Charlotte", "BBL Love Interlude", "Gently", "Rich Baby Daddy", "Another Late Night", "Away From Home", "Polar Opposites", "Red Button", "Stories About My Brother", "The Shoe Fits", "Wick Man", "Evil Ways", "You Broke My Heart", 
+    "VIRGINIA BEACH", "AMEN", "CALLING FOR YOU", "FEAR OF HEIGHTS", "DAYLIGHT", "FIRST PERSON SHOOTER", "IDGAF", "7969 SANTA", "SLIME YOU OUT", "BAHAMAS PROMISES", "TRIED OUR BEST", "SCREW THE WORLD", "DREW A PICASSO", "MEMBERS ONLY", "WHAT WOULD PLUTO DO", "ALL THE PARTIES", "8AM IN CHARLOTTE", "BBL LOVE INTERLUDE", "GENTLY", "RICH BABY DADDY", "ANOTHER LATE NIGHT", "AWAY FROM HOME", "POLAR OPPOSITES", "RED BUTTON", "STORIES ABOUT MY BROTHER", "THE SHOE FITS", "WICK MAN", "EVIL WAYS", "YOU BROKE MY HEART", 
 
-    "CN Tower", "Moth Balls", "Something About You", "Crying in Chanel", "Spider-Man Superman", "Deeper", "Small Town Fame", "Pimmie's Dilemma", "Brian Steel", "Gimme a Hug", "Raining in Houston", "Lasers", "Meet Your Padre", "Nokia", "Die Trying", "Somebody Loves Me", "Celibacy", "OMW", "Glorious", "When He's Gone", "Greedy", 
+    "CN TOWER", "MOTH BALLS", "SOMETHING ABOUT YOU", "CRYING IN CHANEL", "SPIDER-MAN SUPERMAN", "DEEPER", "SMALL TOWN FAME", "PIMMIE'S DILEMMA", "BRIAN STEEL", "GIMME A HUG", "RAINING IN HOUSTON", "LASERS", "MEET YOUR PADRE", "NOKIA", "DIE TRYING", "SOMEBODY LOVES ME", "CELIBACY", "OMW", "GLORIOUS", "WHEN HE'S GONE", "GREEDY", 
 
-    "Make Them Cry", "Dust", "Whisper My Name", "Janice STFU", "Ran To Atlanta", "Shabang", "Make Them Pay", "Burning Bridges", "National Treasures", "B's On The Table", "What Did I Miss?", "Plot Twist", "2 Hard 4 The Radio", "Make Them Remember", "Little Birdie", "Don't Worry", "Firm Friends", "Make Them Know", 
+    "MAKE THEM CRY", "DUST", "WHISPER MY NAME", "JANICE STFU", "RAN TO ATLANTA", "SHABANG", "MAKE THEM PAY", "BURNING BRIDGES", "NATIONAL TREASURES", "B'S ON THE TABLE", "WHAT DID I MISS?", "PLOT TWIST", "2 HARD 4 THE RADIO", "MAKE THEM REMEMBER", "LITTLE BIRDIE", "DON'T WORRY", "FIRM FRIENDS", "MAKE THEM KNOW", 
 
-    "Hoe Phase", "Road Trips", "Outside Tweaking", "Cheetah Print", "Which One", "Amazing Shape", "BBW", "True Bestie", "Where's Your Stuff Interlude", "New Bestie", "Q&A", "Stuck", "Goose and The Juice", "Princess", 
+    "HOE PHASE", "ROAD TRIPS", "OUTSIDE TWEAKING", "CHEETAH PRINT", "WHICH ONE", "AMAZING SHAPE", "BBW", "TRUE BESTIE", "WHERE'S YOUR STUFF INTERLUDE", "NEW BESTIE", "Q&A", "STUCK", "GOOSE AND THE JUICE", "PRINCESS", 
 
-    "Rusty Intro", "WNBA", "Slap The City", "High Fives", "Hurrr Nor Thurrr", "I'm Spent", "Classic", "Gen 5", "White Bone", "Fortworth", "Prioritizing"
+    "RUSTY INTRO", "WNBA", "SLAP THE CITY", "HIGH FIVES", "HURRR NOR THURRR", "I'M SPENT", "CLASSIC", "GEN 5", "WHITE BONE", "FORTWORTH", "PRIORITIZING"
 
 ]; 
 
-const so_far_gone_songs = ["Lust For Life", "Houstatlantavegas", "Successful", "Let's Call It Off", "November 18th", "Ignant Shit", "A Night Off", "Say What's Real", "Little Bit", "Best I Ever Had", "Unstoppable", "Uptown", "Sooner Than Later", "Bria's Interlude", "The Calm", "Brand New", "Congratulations"];
-const thank_me_later_songs = ["Fireworks", "Karaoke", "The Resistance", "Over", "Show Me a Good Time", "Up All Night", "Fancy", "Shut It Down", "Unforgettable", "Light Up", "Miss Me", "Cece's Interlude", "Find Your Love", "Thank Me Now"];
-const take_care_songs = ["Over My Dead Body", "Shot for Me", "Headlines", "Crew Love", "Take Care", "Marvins Room", "Buried Alive Interlude", "Under Ground Kings", "We'll Be Fine", "Make Me Proud", "Lord Knows", "Cameras", "Doing It Wrong", "The Real Her", "Look What You've Done", "HYFR", "Practice", "The Ride"];
-const nothing_was_the_same_songs = ["Tuscan Leather", "Furthest Thing", "Started From the Bottom", "Wu-Tang Forever", "Own It", "Worst Behavior", "From Time", "Hold On, We're Going Home", "Connect", "The Language", "305 To My City", "Too Much", "Pound Cake", "Come Thru", "All Me"];
-const if_youre_reading_this_its_too_late_songs = ["Legend", "Energy", "10 Bands", "Know Yourself", "No Tellin'", "Madonna", "6 God", "Star67", "Preach", "Wednesday Night Interlude", "Used To", "6 Man", "Now & Forever", "Company", "You & The 6", "Jungle", "6pm in New York"];
-const what_a_time_to_be_alive_songs = ["Digital Dash", "Big Rings", "Live From The Gutter", "Diamonds Dancing", "Scholarships", "Plastic Bag", "I'm The Plug", "Change Locations", "Jumpman", "Jersey", "30 for 30 Freestyle"];
-const views_songs = ["Keep the Family Close", "9", "U With Me?", "Feel No Ways", "Hype", "Weston Road Flows", "Redemption", "With You", "Faithful", "Still Here", "Controlla", "One Dance", "Grammys", "Child's Play", "Pop Style", "Too Good", "Summers Over Interlude", "Fire & Desire", "Views", "Hotline Bling"];
-const more_life_songs = ["Free Smoke", "No Long Talk", "Passionfruit", "Jorja Interlude", "Get It Together", "Madiba Riddim", "Blem", "4422", "Gyalchester", "Skepta Interlude", "Portland", "Sacrifices", "Nothings Into Somethings", "Teenage Fever", "KMT", "Lose You", "Can't Have Everything", "Glow", "Since Way Back", "Fake Love", "Ice Melts", "Do Not Disturb"];
-const scorpion_songs = ["Survival", "Nonstop", "Elevate", "Emotionless", "God's Plan", "I'm Upset", "8 Out of 10", "Mob Ties", "Can't Take a Joke", "Sandra's Rose", "Talk Up", "Is There More", "Peak", "Summer Games", "Jaded", "Nice For What", "Finesse", "Ratchet Happy Birthday", "That's How You Feel", "Blue Tint", "In My Feelings", "Don't Matter To Me", "After Dark", "Final Fantasy", "March 14"];
-const care_package_songs = ["Dreams Money Can Buy", "The Motion", "How Bout Now", "Trust Issues", "Days in the East", "Draft Day", "4PM in Calabasas", "5AM in Toronto", "I Get Lonely", "My Side", "Jodeci Freestyle", "Club Paradise", "Free Spirit", "Heat of the Moment", "Girls Love Beyoncé", "Paris Morton Music", "Can I"];
-const dark_lane_demo_tapes_songs = ["Deep Pockets", "When To Say When", "Chicago Freestyle", "Not You Too", "Toosie Slide", "Desires", "Time Flies", "Landed", "D4L", "Pain 1993", "Losses", "From Florida With Love", "Demons", "War"];
-const certified_lover_boy_songs = ["Champagne Poetry", "Papi's Home", "Girls Want Girls", "In The Bible", "Love All", "Fair Trade", "Way 2 Sexy", "TSU", "N 2 Deep", "Pipe Down", "Yebba's Heartbreak", "No Friends In The Industry", "Knife Talk", "7am on Bridle Path", "Race My Mind", "Fountains", "Get Along Better", "You Only Live Twice", "IMY2", "F*****g Fans", "The Remorse"];
-const honestly_nevermind_songs = ["Intro", "Falling Back", "Texts Go Green", "Currents", "A Keeper", "Calling My Name", "Sticky", "Massive", "Flight's Booked", "Overdrive", "Down Hill", "Tie That Binds", "Liability", "Jimmy Cooks"];
-const her_loss_songs = ["Rich Flex", "Major Distribution", "On BS", "BackOutsideBoyz", "Privileged Rappers", "Spin Bout U", "Hours In Silence", "Treacherous Twins", "Circo Loco", "Pussy & Millions", "Broke Boys", "Middle of the Ocean", "Jumbotron Shit Poppin", "More M's", "3AM on Glenwood", "I Guess It's Fuck Me"];
-const for_all_the_dogs_songs = ["Virginia Beach", "Amen", "Calling For You", "Fear of Heights", "Daylight", "First Person Shooter", "IDGAF", "7969 Santa", "Slime You Out", "Bahamas Promises", "Tried Our Best", "Screw the World", "Drew a Picasso", "Members Only", "What Would Pluto Do", "All the Parties", "8AM in Charlotte", "BBL Love Interlude", "Gently", "Rich Baby Daddy", "Another Late Night", "Away From Home", "Polar Opposites", "Red Button", "Stories About My Brother", "The Shoe Fits", "Wick Man", "Evil Ways", "You Broke My Heart"];
-const some_sexy_songs_for_you_songs = ["CN Tower", "Moth Balls", "Something About You", "Crying in Chanel", "Spider-Man Superman", "Deeper", "Small Town Fame", "Pimmie's Dilemma", "Brian Steel", "Gimme a Hug", "Raining in Houston", "Lasers", "Meet Your Padre", "Nokia", "Die Trying", "Somebody Loves Me", "Celibacy", "OMW", "Glorious", "When He's Gone", "Greedy"];
-const iceman_songs = ["Make Them Cry", "Dust", "Whisper My Name", "Janice STFU", "Ran To Atlanta", "Shabang", "Make Them Pay", "Burning Bridges", "National Treasures", "B's On The Table", "What Did I Miss?", "Plot Twist", "2 Hard 4 The Radio", "Make Them Remember", "Little Birdie", "Don't Worry", "Firm Friends", "Make Them Know"];
-const maid_of_honor_songs = ["Hoe Phase", "Road Trips", "Outside Tweaking", "Cheetah Print", "Which One", "Amazing Shape", "BBW", "True Bestie", "Where's Your Stuff Interlude", "New Bestie", "Q&A", "Stuck", "Goose and The Juice", "Princess"];
-const habibti_songs = ["Rusty Intro", "WNBA", "Slap The City", "High Fives", "Hurrr Nor Thurrr", "I'm Spent", "Classic", "Gen 5", "White Bone", "Fortworth", "Prioritizing"];
+const so_far_gone_songs = ["LUST FOR LIFE", "HOUSTATLANTAVEGAS", "SUCCESSFUL", "LET'S CALL IT OFF", "NOVEMBER 18TH", "IGNANT SHIT", "A NIGHT OFF", "SAY WHAT'S REAL", "LITTLE BIT", "BEST I EVER HAD", "UNSTOPPABLE", "UPTOWN", "SOONER THAN LATER", "BRIA'S INTERLUDE", "THE CALM", "BRAND NEW", "CONGRATULATIONS"];
+const thank_me_later_songs = ["FIREWORKS", "KARAOKE", "THE RESISTANCE", "OVER", "SHOW ME A GOOD TIME", "UP ALL NIGHT", "FANCY", "SHUT IT DOWN", "UNFORGETTABLE", "LIGHT UP", "MISS ME", "CECE'S INTERLUDE", "FIND YOUR LOVE", "THANK ME NOW"];
+const take_care_songs = ["OVER MY DEAD BODY", "SHOT FOR ME", "HEADLINES", "CREW LOVE", "TAKE CARE", "MARVINS ROOM", "BURIED ALIVE INTERLUDE", "UNDER GROUND KINGS", "WE'LL BE FINE", "MAKE ME PROUD", "LORD KNOWS", "CAMERAS", "DOING IT WRONG", "THE REAL HER", "LOOK WHAT YOU'VE DONE", "HYFR", "PRACTICE", "THE RIDE"];
+const nothing_was_the_same_songs = ["TUSCAN LEATHER", "FURTHEST THING", "STARTED FROM THE BOTTOM", "WU-TANG FOREVER", "OWN IT", "WORST BEHAVIOR", "FROM TIME", "HOLD ON, WE'RE GOING HOME", "CONNECT", "THE LANGUAGE", "305 TO MY CITY", "TOO MUCH", "POUND CAKE", "COME THRU", "ALL ME"];
+const if_youre_reading_this_its_too_late_songs = ["LEGEND", "ENERGY", "10 BANDS", "KNOW YOURSELF", "NO TELLIN'", "MADONNA", "6 GOD", "STAR67", "PREACH", "WEDNESDAY NIGHT INTERLUDE", "USED TO", "6 MAN", "NOW & FOREVER", "COMPANY", "YOU & THE 6", "JUNGLE", "6PM IN NEW YORK"];
+const what_a_time_to_be_alive_songs = ["DIGITAL DASH", "BIG RINGS", "LIVE FROM THE GUTTER", "DIAMONDS DANCING", "SCHOLARSHIPS", "PLASTIC BAG", "I'M THE PLUG", "CHANGE LOCATIONS", "JUMPMAN", "JERSEY", "30 FOR 30 FREESTYLE"];
+const views_songs = ["KEEP THE FAMILY CLOSE", "9", "U WITH ME?", "FEEL NO WAYS", "HYPE", "WESTON ROAD FLOWS", "REDEMPTION", "WITH YOU", "FAITHFUL", "STILL HERE", "CONTROLLA", "ONE DANCE", "GRAMMYS", "CHILD'S PLAY", "POP STYLE", "TOO GOOD", "SUMMERS OVER INTERLUDE", "FIRE & DESIRE", "VIEWS", "HOTLINE BLING"];
+const more_life_songs = ["FREE SMOKE", "NO LONG TALK", "PASSIONFRUIT", "JORJA INTERLUDE", "GET IT TOGETHER", "MADIBA RIDDIM", "BLEM", "4422", "GYALCHESTER", "SKEPTA INTERLUDE", "PORTLAND", "SACRIFICES", "NOTHINGS INTO SOMETHINGS", "TEENAGE FEVER", "KMT", "LOSE YOU", "CAN'T HAVE EVERYTHING", "GLOW", "SINCE WAY BACK", "FAKE LOVE", "ICE MELTS", "DO NOT DISTURB"];
+const scorpion_songs = ["SURVIVAL", "NONSTOP", "ELEVATE", "EMOTIONLESS", "GOD'S PLAN", "I'M UPSET", "8 OUT OF 10", "MOB TIES", "CAN'T TAKE A JOKE", "SANDRA'S ROSE", "TALK UP", "IS THERE MORE", "PEAK", "SUMMER GAMES", "JADED", "NICE FOR WHAT", "FINESSE", "RATCHET HAPPY BIRTHDAY", "THAT'S HOW YOU FEEL", "BLUE TINT", "IN MY FEELINGS", "DON'T MATTER TO ME", "AFTER DARK", "FINAL FANTASY", "MARCH 14"];
+const care_package_songs = ["DREAMS MONEY CAN BUY", "THE MOTION", "HOW BOUT NOW", "TRUST ISSUES", "DAYS IN THE EAST", "DRAFT DAY", "4PM IN CALABASAS", "5AM IN TORONTO", "I GET LONELY", "MY SIDE", "JODECI FREESTYLE", "CLUB PARADISE", "FREE SPIRIT", "HEAT OF THE MOMENT", "GIRLS LOVE BEYONCÉ", "PARIS MORTON MUSIC", "CAN I"];
+const dark_lane_demo_tapes_songs = ["DEEP POCKETS", "WHEN TO SAY WHEN", "CHICAGO FREESTYLE", "NOT YOU TOO", "TOOSIE SLIDE", "DESIRES", "TIME FLIES", "LANDED", "D4L", "PAIN 1993", "LOSSES", "FROM FLORIDA WITH LOVE", "DEMONS", "WAR"];
+const certified_lover_boy_songs = ["CHAMPAGNE POETRY", "PAPI'S HOME", "GIRLS WANT GIRLS", "IN THE BIBLE", "LOVE ALL", "FAIR TRADE", "WAY 2 SEXY", "TSU", "N 2 DEEP", "PIPE DOWN", "YEBBA'S HEARTBREAK", "NO FRIENDS IN THE INDUSTRY", "KNIFE TALK", "7AM ON BRIDLE PATH", "RACE MY MIND", "FOUNTAINS", "GET ALONG BETTER", "YOU ONLY LIVE TWICE", "IMY2", "F*****G FANS", "THE REMORSE"];
+const honestly_nevermind_songs = ["INTRO", "FALLING BACK", "TEXTS GO GREEN", "CURRENTS", "A KEEPER", "CALLING MY NAME", "STICKY", "MASSIVE", "FLIGHT'S BOOKED", "OVERDRIVE", "DOWN HILL", "TIE THAT BINDS", "LIABILITY", "JIMMY COOKS"];
+const her_loss_songs = ["RICH FLEX", "MAJOR DISTRIBUTION", "ON BS", "BACKOUTSIDEBOYZ", "PRIVILEGED RAPPERS", "SPIN BOUT U", "HOURS IN SILENCE", "TREACHEROUS TWINS", "CIRCO LOCO", "PUSSY & MILLIONS", "BROKE BOYS", "MIDDLE OF THE OCEAN", "JUMBOTRON SHIT POPPIN", "MORE M'S", "3AM ON GLENWOOD", "I GUESS IT'S FUCK ME"];
+const for_all_the_dogs_songs = ["VIRGINIA BEACH", "AMEN", "CALLING FOR YOU", "FEAR OF HEIGHTS", "DAYLIGHT", "FIRST PERSON SHOOTER", "IDGAF", "7969 SANTA", "SLIME YOU OUT", "BAHAMAS PROMISES", "TRIED OUR BEST", "SCREW THE WORLD", "DREW A PICASSO", "MEMBERS ONLY", "WHAT WOULD PLUTO DO", "ALL THE PARTIES", "8AM IN CHARLOTTE", "BBL LOVE INTERLUDE", "GENTLY", "RICH BABY DADDY", "ANOTHER LATE NIGHT", "AWAY FROM HOME", "POLAR OPPOSITES", "RED BUTTON", "STORIES ABOUT MY BROTHER", "THE SHOE FITS", "WICK MAN", "EVIL WAYS", "YOU BROKE MY HEART"];
+const some_sexy_songs_for_you_songs = ["CN TOWER", "MOTH BALLS", "SOMETHING ABOUT YOU", "CRYING IN CHANEL", "SPIDER-MAN SUPERMAN", "DEEPER", "SMALL TOWN FAME", "PIMMIE'S DILEMMA", "BRIAN STEEL", "GIMME A HUG", "RAINING IN HOUSTON", "LASERS", "MEET YOUR PADRE", "NOKIA", "DIE TRYING", "SOMEBODY LOVES ME", "CELIBACY", "OMW", "GLORIOUS", "WHEN HE'S GONE", "GREEDY"];
+const iceman_songs = ["MAKE THEM CRY", "DUST", "WHISPER MY NAME", "JANICE STFU", "RAN TO ATLANTA", "SHABANG", "MAKE THEM PAY", "BURNING BRIDGES", "NATIONAL TREASURES", "B'S ON THE TABLE", "WHAT DID I MISS?", "PLOT TWIST", "2 HARD 4 THE RADIO", "MAKE THEM REMEMBER", "LITTLE BIRDIE", "DON'T WORRY", "FIRM FRIENDS", "MAKE THEM KNOW"];
+const maid_of_honor_songs = ["HOE PHASE", "ROAD TRIPS", "OUTSIDE TWEAKING", "CHEETAH PRINT", "WHICH ONE", "AMAZING SHAPE", "BBW", "TRUE BESTIE", "WHERE'S YOUR STUFF INTERLUDE", "NEW BESTIE", "Q&A", "STUCK", "GOOSE AND THE JUICE", "PRINCESS"];
+const habibti_songs = ["RUSTY INTRO", "WNBA", "SLAP THE CITY", "HIGH FIVES", "HURRR NOR THURRR", "I'M SPENT", "CLASSIC", "GEN 5", "WHITE BONE", "FORTWORTH", "PRIORITIZING"];
 
 const so_far_gone = new Album(so_far_gone_songs, "So Far Gone", "images/sfg.png");
 const thank_me_later = new Album(thank_me_later_songs, "Thank Me Later", "images/tml.png");
@@ -141,6 +141,7 @@ function start() {
     document.getElementById("divTwo").style.visibility="visible";
     document.getElementById("startDiv").style.display="none";
     document.getElementById("label").style.display="block";
+    document.getElementById("button").onclick = read;
 }
 
 function found(song) {
@@ -165,6 +166,7 @@ function compare(songGuessed, correctSong, albumGuessed, correctAlbum) {
 
 function read() { 
     let userSong = document.getElementById("search").value;
+    userSong = userSong.toUpperCase();
     let info=found(userSong);
 
     if (info != null && !userGuesses.includes(userSong)) {
@@ -207,7 +209,7 @@ function validSong(userSong, songInfo) {
     }
     else if (comparaison.x == 0) {
         albumHint = "images/check.png";
-        albumColour = "green"
+        albumColour = "rgb(117, 235, 38)";
     }
     else {albumHint = "images/fleche.png";}
 
@@ -216,16 +218,16 @@ function validSong(userSong, songInfo) {
     }
     else if (comparaison.y == 0) {
         trackHint = "images/check.png";
-        trackColour = "green"
+        trackColour = "rgb(117, 235, 38)";
     }
     else {trackHint = "images/fleche.png";}
 
     if (Math.abs(comparaison.x) <3 && Math.abs(comparaison.x)>0) {
-        albumColour = "yellow";
+        albumColour = "rgb(241, 228, 35)";
     }
 
     if (Math.abs(comparaison.y) <3 && Math.abs(comparaison.y)>0) {
-        trackColour = "yellow";
+        trackColour = "rgb(241, 228, 35)";
     }
 
     if (counter<10) {
@@ -252,3 +254,9 @@ function validSong(userSong, songInfo) {
         }
     } 
 }
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        document.getElementById("button").click();
+    }
+});

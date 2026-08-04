@@ -36,6 +36,10 @@ body {
     font-family: "main";
 }
 
+.userInput {
+    font-size: 17px;
+}
+
 #error {
     font-family: "main";
     min-height: 22px;
