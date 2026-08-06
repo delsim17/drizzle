@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 <title> Drizzle </title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="images/icon.png">
@@ -15,19 +15,24 @@
 </div>
 
 <div id="startDiv">
-<button onclick=startDaily() class="start">Play Daily</button>
-<button onclick=startUnlimited() class="start">Play Unlimited</button>
+<button onclick=startClassic() class="start" id="classicButton">Classic</button>
+<button onclick=startHeardle() class="start" id="heardleButton">Audio</button>
 </div>
 
+<div id="playButtonDiv">
+<button onclick=playSong() id="playButton" style="display: none"><img src="images/playbutton.png"></button>
+</div>
+
+<p id="rounds" style="display: none"><span id="roundOne">0.5s</span><span id="roundTwo">1s</span><span id="roundThree">3s</span><span id="roundFour">5s<span id="roundFive">10s</span></span></p>
+
 <div id="divTwo" style="visibility: hidden">
-<input class="userInput" id="search" placeholder="Enter a Drake Song"> </input>
+<input class="userInput" id="search"> </input>
 <button class="userInput" id="button"> Enter </button>
 <p id="error" style="visibility: hidden"></p>
 </div>
 
-
+<p class = "guess" id="heardleLabel" style="display:none">Song</p>
 <p class = "guess" id="label" style="display:none"><span id="songLabel">Song</span><span id="albumLabel">Album</span><span id="trackLabel">Track#</span></p>
-
 
 <p class = "guess" id="g1" style="display:none">  </p>
 <p class = "guess" id="g2" style="display:none">  </p>

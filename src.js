@@ -70,6 +70,26 @@ const iceman_songs = ["MAKE THEM CRY", "DUST", "WHISPER MY NAME", "JANICE STFU",
 const maid_of_honor_songs = ["HOE PHASE", "ROAD TRIPS", "OUTSIDE TWEAKING", "CHEETAH PRINT", "WHICH ONE", "AMAZING SHAPE", "BBW", "TRUE BESTIE", "WHERE'S YOUR STUFF INTERLUDE", "NEW BESTIE", "Q&A", "STUCK", "GOOSE AND THE JUICE", "PRINCESS"];
 const habibti_songs = ["RUSTY INTRO", "WNBA", "SLAP THE CITY", "HIGH FIVES", "HURRR NOR THURRR", "I'M SPENT", "CLASSIC", "GEN 5", "WHITE BONE", "FORTWORTH", "PRIORITIZING"];
 
+const so_far_gone_music = ["music/lfl.mp3","music/hou.mp3","music/suc.mp3","music/let.mp3","music/nov.mp3","music/ign.mp3","music/ani.mp3","music/say.mp3","music/lit.mp3","music/bes.mp3","music/uns.mp3","music/upt.mp3","music/soo.mp3","music/bri.mp3","music/thecalm.mp3","music/out.mp3","music/bra.mp3","music/cong.mp3"];
+const thank_me_later_music = ["music/fir.mp3","music/kar.mp3","music/theres.mp3","music/ove.mp3","music/show.mp3","music/upa.mp3","music/fan.mp3","music/shu.mp3","music/unf.mp3","music/lig.mp3","music/mis.mp3","music/cec.mp3","music/fin.mp3","music/tha.mp3"];
+const take_care_music = ["music/omd.mp3","music/sho.mp3","music/hea.mp3","music/cre.mp3","music/tak.mp3","music/mar.mp3","music/bur.mp3","music/und.mp3","music/we.mp3","music/mak.mp3","music/lor.mp3","music/cam.mp3","music/doi.mp3","music/rea.mp3","music/lwy.mp3","music/hyf.mp3","music/pra.mp3","music/theride.mp3"];
+const nothing_was_the_same_music = ["music/tus.mp3","music/fur.mp3","music/str.mp3","music/wut.mp3","music/own.mp3","music/wrs.mp3","music/frt.mp3","music/how.mp3","music/conne.mp3","music/lan.mp3","music/305.mp3","music/too.mp3","music/pnd.mp3","music/come.mp3","music/all.mp3"];
+const if_youre_reading_this_its_too_late_music = ["music/leg.mp3","music/ene.mp3","music/10b.mp3","music/kno.mp3","music/not.mp3","music/mad.mp3","music/6go.mp3","music/sta.mp3","music/pre.mp3","music/wni.mp3","music/ust.mp3","music/6ma.mp3","music/now.mp3","music/com.mp3","music/you.mp3","music/jun.mp3","music/6pm.mp3"];
+const what_a_time_to_be_alive_music = ["music/dig.mp3","music/big.mp3","music/liv.mp3","music/dia.mp3","music/sch.mp3","music/pla.mp3","music/i'm.mp3","music/chan.mp3","music/jump.mp3","music/jer.mp3","music/30f.mp3"];
+const views_music = ["music/kee.mp3","music/9.mp3","music/ute.mp3","music/fel.mp3","music/hyt.mp3","music/wes.mp3","music/red.mp3","music/wit.mp3","music/fai.mp3","music/sti.mp3","music/cont.mp3","music/oned.mp3","music/gra.mp3","music/chi.mp3","music/pop.mp3","music/toog.mp3","music/sum.mp3","music/fireand.mp3","music/vie.mp3","music/hot.mp3"];
+const more_life_music = ["music/fre.mp3","music/nol.mp3","music/pas.mp3","music/jor.mp3","music/get.mp3","music/madi.mp3","music/ble.mp3","music/442.mp3","music/gyc.mp3","music/ske.mp3","music/por.mp3","music/sac.mp3","music/nis.mp3","music/tee.mp3","music/kmt.mp3","music/los.mp3","music/can.mp3","music/glo.mp3","music/sin.mp3","music/fak.mp3","music/ice.mp3","music/don.mp3"];
+const scorpion_music = ["music/sur.mp3","music/non.mp3","music/ele.mp3","music/emo.mp3","music/god.mp3","music/ims.mp3","music/8ou.mp3","music/mob.mp3","music/cant.mp3","music/san.mp3","music/tal.mp3","music/isz.mp3","music/pea.mp3","music/sumg.mp3","music/jad.mp3","music/nic.mp3","music/fine.mp3","music/rat.mp3","music/that.mp3","music/blu.mp3","music/inm.mp3","music/dont.mp3","music/aft.mp3","music/finf.mp3","music/marc.mp3"];
+const care_package_music = ["music/dmc.mp3","music/mot.mp3","music/hbn.mp3","music/tis.mp3","music/die.mp3","music/dd.mp3","music/4pc.mp3","music/5am.mp3","music/igl.mp3","music/ms.mp3","music/jfm.mp3","music/cp.mp3","music/fs.mp3","music/hom.mp3","music/glb.mp3","music/pmm.mp3","music/ci.mp3"];
+const dark_lane_demo_tapes_music = ["music/dee.mp3","music/whe.mp3","music/chic.mp3","music/noty.mp3","music/toos.mp3","music/des.mp3","music/tim.mp3","music/land.mp3","music/d4l.mp3","music/pai.mp3","music/loss.mp3","music/from.mp3","music/dem.mp3","music/war.mp3"];
+const certified_lover_boy_music = ["music/cha.mp3","music/pap.mp3","music/gir.mp3","music/int.mp3","music/lov.mp3","music/fair.mp3","music/way.mp3","music/tsu.mp3","music/N2D.mp3","music/pip.mp3","music/yeb.mp3","music/nof.mp3","music/kni.mp3","music/7am.mp3","music/rac.mp3","music/fou.mp3","music/geta.mp3","music/youonly.mp3","music/imy2.mp3","music/fuc.mp3","music/theremo.mp3"];
+const honestly_nevermind_music = ["music/intr.mp3","music/fal.mp3","music/tex.mp3","music/cur.mp3","music/ake.mp3","music/call.mp3","music/stic.mp3","music/mas.mp3","music/fli.mp3","music/over.mp3","music/dow.mp3","music/tie.mp3","music/lia.mp3","music/jim.mp3"];
+const her_loss_music = ["music/ric.mp3","music/maj.mp3","music/onb.mp3","music/bac.mp3","music/pri.mp3","music/spi.mp3","music/hour.mp3","music/tre.mp3","music/cir.mp3","music/pus.mp3","music/bro.mp3","music/mid.mp3","music/jum.mp3","music/mor.mp3","music/3am.mp3","music/igu.mp3"];
+const for_all_the_dogs_music = ["music/vir.mp3","music/ame.mp3","music/cal.mp3","music/fea.mp3","music/day.mp3","music/fps.mp3","music/idg.mp3","music/796.mp3","music/sli.mp3","music/bah.mp3","music/tri.mp3","music/scr.mp3","music/dre.mp3","music/mem.mp3","music/wou.mp3","music/allt.mp3","music/8am.mp3","music/bbl.mp3","music/gen.mp3","music/rich.mp3","music/ano.mp3","music/awa.mp3","music/pol.mp3","music/redb.mp3","music/sam.mp3","music/shoe.mp3","music/wic.mp3","music/evi.mp3","music/youb.mp3"];
+const some_sexy_songs_for_you_music = ["music/cnt.mp3","music/moth.mp3","music/som.mp3","music/cry.mp3","music/spid.mp3","music/deep.mp3","music/sma.mp3","music/pim.mp3","music/bria.mp3","music/gim.mp3","music/rai.mp3","music/las.mp3","music/mee.mp3","music/nok.mp3","music/diet.mp3","music/somb.mp3","music/cel.mp3","music/omw.mp3","music/glor.mp3","music/when.mp3","music/gre.mp3"];
+const iceman_music = ["music/makecry.mp3","music/dus.mp3","music/whi.mp3","music/jan.mp3","music/ran.mp3","music/sha.mp3","music/makepay.mp3","music/burn.mp3","music/nat.mp3","music/bso.mp3","music/wha.mp3","music/plo.mp3","music/2ha.mp3","music/makeremember.mp3","music/litt.mp3","music/dw.mp3","music/firm.mp3","music/makeknow.mp3"];
+const maid_of_honor_music = ["music/hoe.mp3","music/roa.mp3","music/outs.mp3","music/che.mp3","music/whic.mp3","music/ama.mp3","music/bbw.mp3","music/tru.mp3","music/wher.mp3","music/new.mp3","music/q&a.mp3","music/stu.mp3","music/goo.mp3","music/prin.mp3"];
+const habibti_music = ["music/rus.mp3","music/wnb.mp3","music/sla.mp3","music/hig.mp3","music/hur.mp3","music/imsp.mp3","music/cla.mp3","music/gen5.mp3","music/whit.mp3","music/for.mp3","music/prio.mp3"];
+
 const so_far_gone = new Album(so_far_gone_songs, "So Far Gone", "images/sfg.png");
 const thank_me_later = new Album(thank_me_later_songs, "Thank Me Later", "images/tml.png");
 const take_care = new Album(take_care_songs, "Take Care", "images/tc.png");
@@ -92,7 +112,13 @@ const habibti = new Album(habibti_songs, "Habibti", "images/h.png");
 
 const albums = [so_far_gone, thank_me_later, take_care, nothing_was_the_same, if_youre_reading_this_its_too_late, what_a_time_to_be_alive, views, more_life, scorpion, care_package, dark_lane_demo_tapes, certified_lover_boy, honestly_nevermind, her_loss, for_all_the_dogs, some_sexy_songs_for_you, iceman, maid_of_honor, habibti];
 
+const musicAlbums = [so_far_gone_music, thank_me_later_music, take_care_music, nothing_was_the_same_music, if_youre_reading_this_its_too_late_music, what_a_time_to_be_alive_music, views_music, more_life_music, scorpion_music, care_package_music, dark_lane_demo_tapes_music, certified_lover_boy_music, honestly_nevermind_music, her_loss_music, for_all_the_dogs_music, some_sexy_songs_for_you_music, iceman_music, maid_of_honor_music, habibti_music];
+
 const guesses = ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10"];
+
+const rounds = ["roundOne", "roundTwo", "roundThree", "roundFour", "roundFive"];
+
+const durations = [500, 1000, 3000, 5000, 10000];
 
 const userGuesses = [];
 
@@ -105,6 +131,25 @@ let trackNumber = null;
 let daily = false;
 let startDate = new Date("2026-08-04");
 startDate.setHours(0, 0, 0, 0);
+let heardle=false;
+let mp3Song = new Audio();
+
+function startClassic() {
+    gameMode();
+}
+
+function startHeardle() {
+    heardle=true;
+    gameMode();
+}
+
+function gameMode() {
+    document.getElementById("classicButton").innerHTML="Play Daily";
+    document.getElementById("classicButton").onclick=startDaily;
+    document.getElementById("heardleButton").innerHTML="Play Unlimited";
+    document.getElementById("heardleButton").onclick=startUnlimited;
+}
+
 
 function startDaily() {
     daily = true;
@@ -123,17 +168,29 @@ function startAgain() {
     userGuesses.length = 0;
     document.getElementById("startAgain").style.display="none";
     document.getElementById("result").style.display="none";
+    document.getElementById("search").value="";
+    document.getElementById("button").onclick=read;
     startUnlimited();
 }
 
 
 function start() {
     if (daily) {
-        let today = new Date();
-        today.setHours(0, 0, 0, 0);
-        let diff = Math.floor((today-startDate)/1000/60/60/24);
-        randSong = songs[diff%songs.length];
-        songInfo = found(randSong);
+        if (!heardle) {
+            let today = new Date();
+            today.setHours(0, 0, 0, 0);
+            let diff = Math.floor((today-startDate)/1000/60/60/24);
+            randSong = songs[diff%songs.length];
+            songInfo = found(randSong);
+        }
+
+        else {
+            let today = new Date();
+            today.setHours(0, 0, 0, 0);
+            let diff = Math.floor((today-startDate)/1000/60/60/24);
+            randSong = songs[Math.floor(songs.length/2) + (diff % Math.ceil(songs.length/2))];
+            songInfo = found(randSong);
+        }
     }
 
     else {
@@ -142,8 +199,34 @@ function start() {
     }
     document.getElementById("divTwo").style.visibility="visible";
     document.getElementById("startDiv").style.display="none";
-    document.getElementById("label").style.display="block";
+    if (!heardle) {
+        document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
+        document.getElementById("label").style.display="block";
+    }
+
+    else {
+        document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/5)";
+        document.getElementById("playButton").style.display="inline-block";
+        document.getElementById("heardleLabel").style.display="block";
+        document.getElementById("rounds").style.display="block";
+        document.getElementById("divTwo").style.padding="5px";
+        document.getElementById("playButton").onclick=playSong;
+        illuminate(counter);
+        mp3Song.src=musicAlbums[songInfo.x-1][songInfo.y-1];
+    }
     document.getElementById("button").onclick = read;
+}
+
+function playSong() {
+    mp3Song.currentTime = 0;
+    mp3Song.play();
+    setTimeout(function() {
+        mp3Song.pause();
+    }, durations[counter]);
+}
+
+function pauseSong() {
+    mp3Song.pause();
 }
 
 function found(song) {
@@ -166,13 +249,25 @@ function compare(songGuessed, correctSong, albumGuessed, correctAlbum) {
         return temp;
     }
 
+function illuminate(round) {
+    for (let i=0;i<5;i++) {
+        document.getElementById(rounds[i]).style.color="rgba(100, 100, 100, 0.5)";
+    }
+    document.getElementById(rounds[round]).style.color="black";
+}
+
 function read() { 
     let userSong = document.getElementById("search").value;
     userSong = userSong.toUpperCase();
     let info=found(userSong);
 
     if (info != null && !userGuesses.includes(userSong)) {
-        validSong(userSong, songInfo);
+        if (!heardle) {
+            validSong(userSong, songInfo);
+        }
+        else {
+            heardleValidSong(userSong, songInfo);
+        }
         document.getElementById("search").value="";
     }
     
@@ -188,6 +283,54 @@ function read() {
     }
 
 
+}
+
+function heardleValidSong(userSong, songInfo) {
+    document.getElementById("error").style.visibility="hidden";
+    userGuesses.push(userSong);
+    let hint = "";
+    if (userSong === randSong) {
+        hint = "images/check.png";
+    }
+
+    else {
+        hint = "images/x.png";
+    }
+
+    if (counter<5) {
+        document.getElementById(guesses[counter]).innerHTML = "<span class='heardleSong'>" + userSong + "</span> <span id='heardleHint'><img src='" + hint + "'></span>";
+        document.getElementById(guesses[counter]).style.display="block";
+        if (userSong === randSong) {
+            document.getElementById("result").innerHTML="You Win!";
+            document.getElementById("result").style.display="block";
+            document.getElementById("button").onclick = null;
+            document.getElementById("playButton").onclick = null;
+            if (!daily) {
+                document.getElementById("startAgain").style.display="inline-block";
+            }
+        }
+
+        else {
+            counter++;  
+        }
+        if (counter != 5) {
+            document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/5)";
+            illuminate(counter);
+        }
+
+        if (counter == 5) {
+            document.getElementById("result").innerHTML="Better luck next time. The song was " + randSong;
+            document.getElementById("result").style.display="block";
+            document.getElementById("button").onclick = null;
+            document.getElementById("playButton").onclick = null;
+            document.getElementById("startAgain").style.display="inline-block";
+        }
+
+        window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+        });
+    } 
 }
 
 function validSong(userSong, songInfo) {
@@ -236,7 +379,10 @@ function validSong(userSong, songInfo) {
         document.getElementById(guesses[counter]).innerHTML = "<span class='song'>" + userSong + "</span>" + "<span class='album'><img src='" + albums[albumNumberG-1].albumLink + "'></span>" + "<span class='arrow' id='arrow" + counter + "'><img src='" + albumHint + "'></span>" + "<span class='track'>" + trackNumberG + "</span>" + "<span class='arrow2' id='arrow" + counter + "2'><img src='" + trackHint + "'></span>";
         document.getElementById(guesses[counter]).style.display="block";
         document.querySelector("#arrow" + counter + " img").style.backgroundColor = albumColour;
+        document.querySelector("#arrow" + counter + " img").style.borderRadius = "50%";
         document.querySelector("#arrow" + counter + "2 img").style.backgroundColor = trackColour;
+        document.querySelector("#arrow" + counter + "2 img").style.borderRadius = "50%";
+
         if (userSong === randSong) {
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";
@@ -248,12 +394,22 @@ function validSong(userSong, songInfo) {
         else {
             counter++;  
         }
+
+        if (counter != 10) {
+            document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
+        }
         
         if (counter == 10) {
             document.getElementById("result").innerHTML="Better luck next time. The song was " + randSong;
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
+            document.getElementById("startAgain").style.display="inline-block";
         }
+
+        window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+        });
     } 
 }
 

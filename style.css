@@ -21,15 +21,42 @@ body {
     text-align: center;
 }
 
+#playButtonDiv {
+    text-align: center;
+    padding: 5px;
+}
+
+#playButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#rounds {
+    text-align: center;
+    font-family: "main";
+    font-size: 20px;
+}
+
+#rounds span {
+    margin: 0 10px;
+}
+
 .start {
     background-color: rgb(190, 190, 190); 
     font-family: "main";
     font-size: x-large;
+    margin: 0 10px;
+    border-color: rgb(100, 100, 100);
+    border-radius: 10px;
 }
 
 #search {
     background-color: rgb(190, 190, 190);
     font-family: "main";
+    width: 220px;
 }
 #button {
     background-color: rgb(190, 190, 190); 
@@ -38,11 +65,17 @@ body {
 
 .userInput {
     font-size: 17px;
+    border-color: rgb(100, 100, 100);
+    border-radius: 10px;
 }
 
 #error {
     font-family: "main";
     min-height: 22px;
+}
+
+#heardleLabel {
+    margin-top: 0;
 }
 
 #songLabel {
@@ -51,11 +84,13 @@ body {
     transform: translateX(-50%);
 
 }
+
 #albumLabel {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
+
 #trackLabel {
     position: absolute;
     right: 36%;
@@ -72,6 +107,18 @@ body {
 .song {
     position: absolute;
     left: 36.5%;
+    transform: translateX(-50%);
+}
+
+.heardleSong {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#heardleHint {
+    position: absolute;
+    left: 63%;
     transform: translateX(-50%);
 }
 
