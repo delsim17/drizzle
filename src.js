@@ -251,7 +251,7 @@ function compare(songGuessed, correctSong, albumGuessed, correctAlbum) {
 
 function illuminate(round) {
     for (let i=0;i<5;i++) {
-        document.getElementById(rounds[i]).style.color="rgba(100, 100, 100, 0.5)";
+        document.getElementById(rounds[i]).style.color="rgb(100, 100, 100)";
     }
     document.getElementById(rounds[round]).style.color="black";
 }

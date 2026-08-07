@@ -157,4 +157,62 @@ body {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    #songLabel {
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
 
+    }
+
+    #albumLabel {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #trackLabel {
+        position: absolute;
+        right: 25%;
+        transform: translateX(+50%);
+    }
+
+    .song {
+        position: absolute;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    .album {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -12px;
+    }
+
+    .track {
+        position: absolute;
+        right: 25%;
+        transform: translateX(+50%);
+    }
+
+    .arrow {
+        position: absolute;
+        left: 54.2%;
+        transform: translateX(-50%);
+        top: 5px;
+    }
+
+    .arrow2 {
+        position: absolute;
+        left: 79.2%;
+        transform: translateX(-50%);
+        top: 2px;
+    }
+
+    #heardleHint {
+        position: absolute;
+        left: 75%;
+        transform: translateX(-50%);
+    }
+}
