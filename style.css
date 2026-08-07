@@ -160,7 +160,7 @@ body {
 @media (max-width: 768px) {
     #songLabel {
     position: absolute;
-    left: 25%;
+    left: 20%;
     transform: translateX(-50%);
 
     }
@@ -173,14 +173,15 @@ body {
 
     #trackLabel {
         position: absolute;
-        right: 25%;
+        right: 20%;
         transform: translateX(+50%);
     }
 
     .song {
         position: absolute;
-        left: 25%;
+        left: 20%;
         transform: translateX(-50%);
+        max-width: 100px;
     }
 
     .album {
@@ -192,27 +193,27 @@ body {
 
     .track {
         position: absolute;
-        right: 25%;
+        right: 20%;
         transform: translateX(+50%);
     }
 
     .arrow {
         position: absolute;
-        left: 54.2%;
+        left: 65%;
         transform: translateX(-50%);
         top: 5px;
     }
 
     .arrow2 {
         position: absolute;
-        left: 79.2%;
+        left: 82%;
         transform: translateX(-50%);
         top: 2px;
     }
 
     #heardleHint {
         position: absolute;
-        left: 75%;
+        left: 85%;
         transform: translateX(-50%);
     }
 }
