@@ -178,10 +178,11 @@ body {
     }
 
     .song {
+        font-size: 12px;
         position: absolute;
         left: 20%;
         transform: translateX(-50%);
-        max-width: 100px;
+        max-width: 120px;
     }
 
     .album {
@@ -199,14 +200,14 @@ body {
 
     .arrow {
         position: absolute;
-        left: 65%;
+        left: 64%;
         transform: translateX(-50%);
         top: 5px;
     }
 
     .arrow2 {
         position: absolute;
-        left: 82%;
+        left: 88%;
         transform: translateX(-50%);
         top: 2px;
     }
