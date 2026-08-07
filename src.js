@@ -144,9 +144,9 @@ function startHeardle() {
 }
 
 function gameMode() {
-    document.getElementById("classicButton").innerHTML="Play Daily";
+    document.getElementById("classicButton").innerHTML="Daily";
     document.getElementById("classicButton").onclick=startDaily;
-    document.getElementById("heardleButton").innerHTML="Play Unlimited";
+    document.getElementById("heardleButton").innerHTML="Unlimited";
     document.getElementById("heardleButton").onclick=startUnlimited;
 }
 
