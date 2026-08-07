@@ -8,6 +8,12 @@ body {
     background-color: rgb(128,128,128);
 }
 
+button, input {
+    color: black;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 #logo {
     text-align: center;
     padding: 20px;
