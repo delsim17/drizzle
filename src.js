@@ -278,7 +278,7 @@ function start() {
             songInfo = found(randSong);
             if (stats.classicDailyGuesses.length != 0) {
                 for (let i=0;i<stats.classicDailyGuesses.length;i++) {
-                    validSong(stats.classicDailyGuesses[i], randSong, true)
+                    validSong(stats.classicDailyGuesses[i], songInfo, true)
                 }
             }
         }
@@ -293,7 +293,7 @@ function start() {
 
             if (stats.audioDailyGuesses.length != 0) {
                 for (let i=0;i<stats.audioDailyGuesses.length;i++) {
-                    validSong(stats.audioDailyGuesses[i], randSong, true)
+                    validSong(stats.audioDailyGuesses[i], songInfo, true)
                 }
             }
         }
