@@ -122,6 +122,32 @@ const durations = [500, 1000, 3000, 5000, 10000];
 
 const userGuesses = [];
 
+const stats = {
+    classicDailyGuesses: [],
+    audioDailyGuesses: [], 
+    classicDistribution: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+    audioDistribution: [0, 0, 0, 0, 0], 
+    savedDiff: 0,
+    audioPlayedToday: false,
+    classicPlayedToday: false,
+    audioWonToday: false,
+    classicWonToday: false,
+    audioWins: 0, 
+    audioPlays: 0, 
+    classicWins: 0,
+    classicPlays: 0
+};
+
+const savedStats = localStorage.getItem("stats");
+
+if (savedStats) {
+    Object.assign(stats, JSON.parse(savedStats));
+}
+
+function ss() {
+    localStorage.setItem("stats", JSON.stringify(stats));
+}
+
 let counter = 0;
 
 let randSong = null;
@@ -133,6 +159,36 @@ let startDate = new Date("2026-08-04");
 startDate.setHours(0, 0, 0, 0);
 let heardle=false;
 let mp3Song = new Audio();
+
+let today = new Date();
+today.setHours(0, 0, 0, 0);
+let diff = Math.floor((today-startDate)/1000/60/60/24);
+
+if (diff > stats.savedDiff) {
+    newDay();
+}
+
+function newDay() {
+    stats.classicPlayedToday = false;
+    stats.audioPlayedToday = false;
+    stats.classicWonToday = false;
+    stats.audioWonToday = false;
+    stats.classicDailyGuesses = [];
+    stats.audioDailyGuesses = [];
+    stats.savedDiff = diff;
+    ss();
+}
+
+function info() {
+    document.getElementById("info").style.display="inline-block";
+    document.getElementById("xButton").style.display="inline-block";
+    document.getElementById("infoButton").style.display="none";
+}
+function x() {
+    document.getElementById("info").style.display="none";
+    document.getElementById("xButton").style.display="none";
+    document.getElementById("infoButton").style.display="inline-block";
+}
 
 function startClassic() {
     gameMode();
@@ -148,6 +204,8 @@ function gameMode() {
     document.getElementById("classicButton").onclick=startDaily;
     document.getElementById("heardleButton").innerHTML="Unlimited";
     document.getElementById("heardleButton").onclick=startUnlimited;
+    document.getElementById("backButton").style.display="inline-block";
+    document.getElementById("backButton").onclick=fullBack;
 }
 
 
@@ -160,7 +218,8 @@ function startUnlimited() {
     start();
 }
 
-function startAgain() {
+
+function reset() {
     for (let i=0;i<10;i++) {
         document.getElementById(guesses[i]).style.display="none";
     }
@@ -170,27 +229,75 @@ function startAgain() {
     document.getElementById("result").style.display="none";
     document.getElementById("search").value="";
     document.getElementById("button").onclick=read;
+    document.getElementById("error").style.visibility="hidden";
+    mp3Song.pause();
+    mp3Song.currentTime=0;
+}
+
+function startAgain() {
+    reset();
     startUnlimited();
+}
+
+function back() {
+    reset();
+    document.getElementById("divTwo").style.visibility="hidden";
+    document.getElementById("startDiv").style.display="block";
+    if (heardle) {
+        document.getElementById("playButton").style.display="none";
+        document.getElementById("heardleLabel").style.display="none";
+        document.getElementById("rounds").style.display="none";
+        document.getElementById("divTwo").style.padding="0px";
+    }
+    else {
+        document.getElementById("label").style.display="none";
+    }
+    document.getElementById("backButton").onclick=fullBack;
+    daily = false;
+}
+
+function fullBack() {
+    document.getElementById("classicButton").innerHTML="Classic";
+    document.getElementById("classicButton").onclick=startClassic;
+    document.getElementById("heardleButton").innerHTML="Audio";
+    document.getElementById("heardleButton").onclick=startHeardle;
+    document.getElementById("backButton").style.display="none";
+    document.getElementById("backButton").onclick=null;
+    heardle = false;
 }
 
 
 function start() {
     if (daily) {
         if (!heardle) {
-            let today = new Date();
-            today.setHours(0, 0, 0, 0);
-            let diff = Math.floor((today-startDate)/1000/60/60/24);
+            if (!stats.classicPlayedToday) {
+                stats.classicPlays++;
+            }
+            stats.classicPlayedToday = true;
             randSong = songs[diff%songs.length];
             songInfo = found(randSong);
+            if (stats.classicDailyGuesses.length != 0) {
+                for (let i=0;i<stats.classicDailyGuesses.length;i++) {
+                    validSong(stats.classicDailyGuesses[i], randSong, true)
+                }
+            }
         }
 
         else {
-            let today = new Date();
-            today.setHours(0, 0, 0, 0);
-            let diff = Math.floor((today-startDate)/1000/60/60/24);
+            if (!stats.audioPlayedToday) {
+                stats.audioPlays++;
+            }
+            stats.audioPlayedToday = true;
             randSong = songs[Math.floor(songs.length/2) + (diff % Math.ceil(songs.length/2))];
             songInfo = found(randSong);
+
+            if (stats.audioDailyGuesses.length != 0) {
+                for (let i=0;i<stats.audioDailyGuesses.length;i++) {
+                    validSong(stats.audioDailyGuesses[i], randSong, true)
+                }
+            }
         }
+        ss();
     }
 
     else {
@@ -199,6 +306,7 @@ function start() {
     }
     document.getElementById("divTwo").style.visibility="visible";
     document.getElementById("startDiv").style.display="none";
+    document.getElementById("backButton").onclick=back;
     if (!heardle) {
         document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
         document.getElementById("label").style.display="block";
@@ -258,15 +366,15 @@ function illuminate(round) {
 
 function read() { 
     let userSong = document.getElementById("search").value;
-    userSong = userSong.toUpperCase();
+    userSong = userSong.trim().toUpperCase();
     let info=found(userSong);
 
     if (info != null && !userGuesses.includes(userSong)) {
         if (!heardle) {
-            validSong(userSong, songInfo);
+            validSong(userSong, songInfo, false);
         }
         else {
-            heardleValidSong(userSong, songInfo);
+            heardleValidSong(userSong, songInfo, false);
         }
         document.getElementById("search").value="";
     }
@@ -285,7 +393,11 @@ function read() {
 
 }
 
-function heardleValidSong(userSong, songInfo) {
+function heardleValidSong(userSong, songInfo, a) {
+    if (!a) {
+        stats.audioDailyGuesses.push(userSong);
+        ss();
+    }
     document.getElementById("error").style.visibility="hidden";
     userGuesses.push(userSong);
     let hint = "";
@@ -305,6 +417,12 @@ function heardleValidSong(userSong, songInfo) {
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
             document.getElementById("playButton").onclick = null;
+            if (!stats.audioWonToday && daily) {
+                stats.audioWins++;
+                stats.audioWonToday = true;
+                stats.audioDistribution[counter]++;
+                ss();
+            }
             if (!daily) {
                 document.getElementById("startAgain").style.display="inline-block";
             }
@@ -333,7 +451,11 @@ function heardleValidSong(userSong, songInfo) {
     } 
 }
 
-function validSong(userSong, songInfo) {
+function validSong(userSong, songInfo, a) {
+    if (!a) {
+        stats.classicDailyGuesses.push(userSong);
+        ss();
+    }
     document.getElementById("error").style.visibility="hidden";
     userGuesses.push(userSong);
     let info = found(userSong);
@@ -387,6 +509,12 @@ function validSong(userSong, songInfo) {
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
+            if (!stats.classicWonToday && daily) {
+                stats.classicWins++;
+                stats.classicWonToday = true;
+                stats.classicDistribution[counter]++;
+                ss();
+            }
             if (!daily) {
                 document.getElementById("startAgain").style.display="inline-block";
             }
@@ -418,3 +546,7 @@ document.addEventListener("keydown", function(event) {
         document.getElementById("button").click();
     }
 });
+
+if (window.innerWidth <= 768) {
+    document.getElementById("info").src = "images/infoVert.png";
+}

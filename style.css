@@ -12,11 +12,56 @@ button, input {
     color: black;
     -webkit-appearance: none;
     appearance: none;
+    cursor: pointer;
 }
 
 #logo {
     text-align: center;
     padding: 20px;
+}
+
+#info {
+    border: 5px solid black;
+    border-radius: 2%;
+    max-width: 750px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+#xButton {
+    position: absolute;
+    left: 74%;
+    top: 8%;
+    background-color: rgb(75, 75, 75); 
+    font-family: "main";
+    font-size: 40px;
+    border: none;
+}
+
+#backButton {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#infoButton {
+    position: absolute;
+    left: 80%;
+    top: 17%;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#infoButton img {
+    max-width: 40px;
 }
 
 #startDiv {
@@ -37,7 +82,6 @@ button, input {
     border: none;
     padding: 0;
     margin: 0;
-    cursor: pointer;
 }
 
 #rounds {
@@ -164,6 +208,29 @@ button, input {
 }
 
 @media (max-width: 768px) {
+
+    #infoButton {
+        left: 86%;
+        top: 8%;
+    }
+
+    #info {
+        top: 2%;
+        max-width: 300px;
+    }
+
+    #xButton {
+        left: 79%;
+        top: 3%;
+        font-size: 30px;
+    }
+
+    #backButton {
+    position: absolute;
+    left: 2%;
+    top: 8%;
+    }
+
     #songLabel {
     position: absolute;
     left: 20%;

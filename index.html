@@ -11,6 +11,9 @@
 
 <body>
 
+<button id="backButton" style="display: none"><img src="images/back.png"></button>
+<button id="infoButton" onclick=info()><img src="images/icircle.png"></button>
+
 <div id="logo">
 <img src="images/drizzle.png">
 </div>
@@ -50,6 +53,9 @@
 <div id="againDiv">
 <button onclick=startAgain() class="start" id="startAgain" style="display: none;">Play Again?</button>
 </div>
+
+<img id ="info" style="display: none" src="images/info.png"> 
+<button id="xButton" style="display: none" onclick=x()>x</button>
 
 <script src=src.js></script> 
 </body>
