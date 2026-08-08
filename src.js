@@ -293,7 +293,7 @@ function start() {
 
             if (stats.audioDailyGuesses.length != 0) {
                 for (let i=0;i<stats.audioDailyGuesses.length;i++) {
-                    validSong(stats.audioDailyGuesses[i], songInfo, true)
+                    heardleValidSong(stats.audioDailyGuesses[i], songInfo, true)
                 }
             }
         }
