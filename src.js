@@ -239,7 +239,7 @@ function showStats() {
         document.getElementById("stat1").innerHTML = stats.classicPlays;
         document.getElementById("stat2").innerHTML = stats.classicWins;
         if (stats.classicPlays != 0) {
-            document.getElementById("stat3").innerHTML = stats.classicWins/stats.classicPlays*100 + "%";
+            document.getElementById("stat3").innerHTML = Math.floor(stats.classicWins/stats.classicPlays*100) + "%";
         }
 
         else {
@@ -255,7 +255,7 @@ function showStats() {
         document.getElementById("stat1").innerHTML = stats.audioPlays;
         document.getElementById("stat2").innerHTML = stats.audioWins;
         if (stats.audioPlays != 0) {
-            document.getElementById("stat3").innerHTML = stats.audioWins/stats.audioPlays*100 + "%";
+            document.getElementById("stat3").innerHTML = Math.floor(stats.audioWins/stats.audioPlays*100) + "%";
         }
 
         else {
