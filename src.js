@@ -346,6 +346,7 @@ function reset() {
 
 function startAgain() {
     reset();
+    daily = false;
     startUnlimited();
 }
 
@@ -422,7 +423,7 @@ function start() {
             document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
         }
         document.getElementById("label").style.display="block";
-        if (!stats.classicWonToday) {
+        if (!stats.classicWonToday || !daily) {
             document.getElementById("button").onclick = read;
             document.getElementById("playButton").onclick=playSong;
         }
@@ -436,7 +437,7 @@ function start() {
         document.getElementById("heardleLabel").style.display="block";
         document.getElementById("rounds").style.display="block";
         document.getElementById("divTwo").style.padding="5px";
-        if (!stats.audioWonToday) {
+        if (!stats.audioWonToday || !daily) {
             document.getElementById("button").onclick = read;
             document.getElementById("playButton").onclick=playSong;
         }
