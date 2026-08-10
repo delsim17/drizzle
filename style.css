@@ -20,30 +20,43 @@ button, input {
     padding: 20px;
 }
 
-#info {
-    border: 5px solid black;
-    border-radius: 2%;
-    max-width: 750px;
+
+
+#infoContainer {
     position: absolute;
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
+    width: 750px;
 }
 
-.stats {
+#infoContainer img {
+    border: 5px solid black;
+    border-radius: 2%;
+    width: 100%;
+    display: block;
+}
+
+#statsContainer {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: 350px;
+}
+
+#statsContainer img {
     border: 5px solid black;
     border-radius: 2%;
     max-width: 350px;
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
+    width: 100%;
+    display: block;
 }
 
 #xButton {
     position: absolute;
-    left: 74%;
-    top: 8%;
+    left: 92%;
+    top: 3%;
     background-color: rgb(75, 75, 75); 
     font-family: "main";
     font-size: 40px;
@@ -52,8 +65,8 @@ button, input {
 
 #xButtonStats {
     position: absolute;
-    left: 60%;
-    top: 7%;
+    left: 88%;
+    top: 3%;
     background-color: rgb(191,191,191); 
     font-family: "main";
     font-size: 30px;
@@ -64,14 +77,14 @@ button, input {
     width: 45px;
     height: 45px;
     position: absolute;
-    left: 46%;
-    top: 8%;
-    border: 1px solid rgb(100, 100, 100);
+    left: 37%;
+    top: 5%;
     border-radius: 10%;
     background: none;
 }
 
 #classicSwapStats img {
+    border: none;
     max-width: 30px;
 }
 
@@ -79,14 +92,14 @@ button, input {
     width: 45px;
     height: 45px;
     position: absolute;
-    left: 50.5%;
-    top: 8%;
-    border: 1px solid rgb(100, 100, 100);
+    left: 55%;
+    top: 5%;
     border-radius: 10%;
     background: none;
 }
 
 #audioSwapStats img {
+    border: none;
     max-width: 30px;
 }
 
@@ -111,13 +124,13 @@ button, input {
 }
 
 #infoButton img {
-    max-width: 40px;
+    height: 40px;
 }
 
 #statsButton {
     position: absolute;
     left: 75%;
-    top: 18%;
+    top: 17%;
     background: none;
     border: none;
     padding: 0;
@@ -125,7 +138,7 @@ button, input {
 }
 
 #statsButton img {
-    max-width: 40px;
+    height: 40px;
 }
 
 #startDiv {
@@ -273,9 +286,9 @@ button, input {
 
 #hBars {
     position: absolute;
-    left: 50.4%;
+    left: 53%;
     transform: translateX(-50%);
-    top: 17.9%;
+    top: 17.5%;
     height: 100px;
     width: max-content;
 }
@@ -297,9 +310,9 @@ button, input {
 
 #cBars {
     position: absolute;
-    left: 50.4%;
+    left: 53%;
     transform: translateX(-50%);
-    top: 17.9%;
+    top: 17.5%;
     height: 100px;
     width: max-content;
 }
@@ -331,41 +344,38 @@ button, input {
 
 #stat1 {
     position: absolute;
-    top: 57%;
-    left: 43.2%;
+    top: 76%;
+    left: 26.7%;
     transform: translateX(-50%);
 }
 
 #stat2 {
     position: absolute;
-    top: 57%;
-    left: 50.3%;
+    top: 76%;
+    left: 52.6%;
     transform: translateX(-50%);
 }
 
 #stat3 {
     position: absolute;
-    top: 57%;
-    left: 57.3%;
+    top: 76%;
+    left: 78.6%;
     transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+
+    #infoContainer {
+        width: 350px;
+    }
 
     #infoButton {
         left: 86%;
-        top: 8%;
-    }
-
-    #info {
-        top: 2%;
-        max-width: 300px;
+        top: 7%;
     }
 
     #xButton {
-        left: 79%;
-        top: 3%;
-        font-size: 30px;
+        left: 91%;
     }
 
     #backButton {
@@ -433,60 +443,9 @@ button, input {
         left: 85%;
         transform: translateX(-50%);
     }
-
-    .stats {
-        border: 5px solid black;
-        border-radius: 2%;
-        max-width: 350px;
-        position: absolute;
-        left: 50%;
-        top: 6%;
-        transform: translateX(-50%);
-    }
-
-    #cBars {
-        top: 13.8%;
-    }
-
-    #hBars {
-        top: 13.8%;
-    }
-
-    #stat1 {
-        position: absolute;
-        top: 38%;
-        left: 29%;
-        transform: translateX(-50%);
-    }
-
-    #stat2 {
-        position: absolute;
-        top: 38%;
-        left: 50.6%;
-        transform: translateX(-50%);
-    }
-
-    #stat3 {
-        position: absolute;
-        top: 38%;
-        left: 73.5%;
-        transform: translateX(-50%);
-    }
-
-    #xButtonStats {
-        left: 82%;
-    }
-
-    #audioSwapStats {
-        left: 53%;
-    }
-
-    #classicSwapStats {
-        left: 39%;
-    }
-
+    
     #statsButton {
-        left: 86%;
+        left: 85%;
         top: 15%;
     }
 }

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta property="og:image" content="https://drizzlegame.ca/images/icon.png">
+<meta property="og:title" content="Drizzle">
+<meta property="og:description" content="Guess the Daily Drake song!">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Drizzle - Drake Song Guessing Game</title>
@@ -56,21 +59,21 @@
 <button onclick=startAgain() class="start" id="startAgain" style="display: none;">Play Again?</button>
 </div>
 
-<img id ="info" style="display: none" src="images/info.png"> 
+
+<div id="infoContainer">
+<img id="info" style="display: none" src="images/info.png"> 
 <button id="xButton" style="display: none" onclick=x()>x</button>
+</div>
 
-<img class = "stats" id ="statsC" style="display: none" src="images/stats.png"> 
-<img class = "stats" id ="statsA" style="display: none" src="images/audioStats.png"> 
-
+<div id="statsContainer">
+<img id="stats" style="display: none" src="images/stats.png"> 
 <button id="xButtonStats" style="display: none" onclick=closeStats()>x</button>
 <button id="audioSwapStats" style="display: none" onclick=switchStats()><img src="images/note.png"></button>
 <button id="classicSwapStats" style="display: none" onclick=switchStats()><img src="images/cd.png"></button>
-
-
 <p id="cBars" style="display: none"><span id="cBar1"></span><span id="cBar2"></span><span id="cBar3"></span><span id="cBar4"></span><span id="cBar5"></span><span id="cBar6"></span><span id="cBar7"></span><span id="cBar8"></span><span id="cBar9"></span><span id="cBar10"></span></p>
 <p id="hBars" style="display: none"><span id="hBar1"></span><span id="hBar2"></span><span id="hBar3"></span><span id="hBar4"></span><span id="hBar5"></span></p>
 <p id="statNumbers" style="display: none"><span id="stat1"></span><span id="stat2"></span><span id="stat3"></span></p>
-
+</div>
 <script src=src.js></script> 
 </body>
 

@@ -182,13 +182,15 @@ function newDay() {
 function info() {
     document.getElementById("info").style.display="inline-block";
     document.getElementById("xButton").style.display="inline-block";
-    document.getElementById("infoButton").style.display="none";
+    document.getElementById("infoButton").onclick = null;
+    document.getElementById("statsButton").onclick = null;
 }
 
 function x() {
     document.getElementById("info").style.display="none";
     document.getElementById("xButton").style.display="none";
-    document.getElementById("infoButton").style.display="inline-block";
+    document.getElementById("infoButton").onclick = info;
+    document.getElementById("statsButton").onclick = showStats;
 }
 
 const audioStats = stats.audioDistribution;
@@ -203,17 +205,18 @@ function swapStats() {
     if (currentStatsClassic) {
         currentStats = audioStats;
         currentBars = audioBars;
+        document.getElementById("stats").src="images/audioStats.png";
         currentStatsClassic = false;
     }
 
     else {
         currentStats = classicStats;
         currentBars = classicBars;
+        document.getElementById("stats").src="images/stats.png";
         currentStatsClassic = true;
     }
-    document.getElementById("statsC").style.display="none";
+    document.getElementById("stats").style.display="none";
     document.getElementById("cBars").style.display="none";
-    document.getElementById("statsA").style.display="none";
     document.getElementById("hBars").style.display="none";
     document.getElementById("xButtonStats").style.display="none";
     document.getElementById("audioSwapStats").style.display="none";
@@ -226,8 +229,8 @@ function showStats() {
     for (let i=0;i<currentStats.length;i++) {
         sum+=currentStats[i];
     }
+    document.getElementById("stats").style.display="block";
     if (currentStatsClassic) {
-        document.getElementById("statsC").style.display="block";
         document.getElementById("cBars").style.display="inline-block";
         document.getElementById("classicSwapStats").onclick=null;
         document.getElementById("classicSwapStats").style.background="rgb(140,140,140)";
@@ -244,7 +247,6 @@ function showStats() {
         }
     }
     else {
-        document.getElementById("statsA").style.display="block";
         document.getElementById("hBars").style.display="block";
         document.getElementById("audioSwapStats").onclick=null;
         document.getElementById("audioSwapStats").style.background="rgb(140,140,140)";
@@ -260,17 +262,18 @@ function showStats() {
             document.getElementById("stat3").innerHTML = "0%";
         }
     }
-    for (i=0;i<currentBars.length;i++) {
+    for (let i=0;i<currentBars.length;i++) {
         let barHeight = 0;
         if (sum != 0) {
             barHeight = currentStats[i]/sum*maxBarHeight;
         }
         document.getElementById(currentBars[i]).style.height = barHeight + "px";
     }
-    console.log(5)
     document.getElementById("xButtonStats").style.display="block";
     document.getElementById("audioSwapStats").style.display="block";
     document.getElementById("classicSwapStats").style.display="block";
+    document.getElementById("infoButton").onclick = null;
+    document.getElementById("statsButton").onclick = null;
 
 
 }
@@ -282,18 +285,19 @@ function switchStats() {
 
 function closeStats() {
     document.getElementById("statNumbers").style.display="none";
+    document.getElementById("stats").style.display="none";
     if (currentStatsClassic) {
-        document.getElementById("statsC").style.display="none";
         document.getElementById("cBars").style.display="none";
         
     }
     else {
-        document.getElementById("statsA").style.display="none";
         document.getElementById("hBars").style.display="none";
     }
     document.getElementById("xButtonStats").style.display="none";
     document.getElementById("audioSwapStats").style.display="none";
     document.getElementById("classicSwapStats").style.display="none";
+    document.getElementById("infoButton").onclick = info;
+    document.getElementById("statsButton").onclick = showStats;
 }
 
 function startClassic() {
@@ -416,7 +420,11 @@ function start() {
     if (!heardle) {
         if (counter != 10) {
             document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
-            document.getElementById("label").style.display="block";
+        }
+        document.getElementById("label").style.display="block";
+        if (!stats.classicWonToday) {
+            document.getElementById("button").onclick = read;
+            document.getElementById("playButton").onclick=playSong;
         }
     }
 
@@ -428,11 +436,13 @@ function start() {
         document.getElementById("heardleLabel").style.display="block";
         document.getElementById("rounds").style.display="block";
         document.getElementById("divTwo").style.padding="5px";
-        document.getElementById("playButton").onclick=playSong;
+        if (!stats.audioWonToday) {
+            document.getElementById("button").onclick = read;
+            document.getElementById("playButton").onclick=playSong;
+        }
         illuminate(counter);
         mp3Song.src=musicAlbums[songInfo.x-1][songInfo.y-1];
     }
-    document.getElementById("button").onclick = read;
 }
 
 function playSong() {
