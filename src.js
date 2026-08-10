@@ -184,10 +184,116 @@ function info() {
     document.getElementById("xButton").style.display="inline-block";
     document.getElementById("infoButton").style.display="none";
 }
+
 function x() {
     document.getElementById("info").style.display="none";
     document.getElementById("xButton").style.display="none";
     document.getElementById("infoButton").style.display="inline-block";
+}
+
+const audioStats = stats.audioDistribution;
+const audioBars = ["hBar1", "hBar2", "hBar3", "hBar4", "hBar5"];
+const classicStats = stats.classicDistribution;
+const classicBars = ["cBar1", "cBar2", "cBar3", "cBar4", "cBar5", "cBar6", "cBar7", "cBar8", "cBar9", "cBar10"];
+let currentBars = classicBars;
+let currentStats = classicStats;
+let currentStatsClassic = true;
+
+function swapStats() {
+    if (currentStatsClassic) {
+        currentStats = audioStats;
+        currentBars = audioBars;
+        currentStatsClassic = false;
+    }
+
+    else {
+        currentStats = classicStats;
+        currentBars = classicBars;
+        currentStatsClassic = true;
+    }
+    document.getElementById("statsC").style.display="none";
+    document.getElementById("cBars").style.display="none";
+    document.getElementById("statsA").style.display="none";
+    document.getElementById("hBars").style.display="none";
+    document.getElementById("xButtonStats").style.display="none";
+    document.getElementById("audioSwapStats").style.display="none";
+    document.getElementById("classicSwapStats").style.display="none";
+}
+
+function showStats() {
+    let sum=0;
+    document.getElementById("statNumbers").style.display="block";
+    for (let i=0;i<currentStats.length;i++) {
+        sum+=currentStats[i];
+    }
+    if (currentStatsClassic) {
+        document.getElementById("statsC").style.display="block";
+        document.getElementById("cBars").style.display="inline-block";
+        document.getElementById("classicSwapStats").onclick=null;
+        document.getElementById("classicSwapStats").style.background="rgb(140,140,140)";
+        document.getElementById("audioSwapStats").style.background="none";
+        document.getElementById("audioSwapStats").onclick=switchStats;
+        document.getElementById("stat1").innerHTML = stats.classicPlays;
+        document.getElementById("stat2").innerHTML = stats.classicWins;
+        if (stats.classicPlays != 0) {
+            document.getElementById("stat3").innerHTML = stats.classicWins/stats.classicPlays*100 + "%";
+        }
+
+        else {
+            document.getElementById("stat3").innerHTML = "0%";
+        }
+    }
+    else {
+        document.getElementById("statsA").style.display="block";
+        document.getElementById("hBars").style.display="block";
+        document.getElementById("audioSwapStats").onclick=null;
+        document.getElementById("audioSwapStats").style.background="rgb(140,140,140)";
+        document.getElementById("classicSwapStats").style.background="none";
+        document.getElementById("classicSwapStats").onclick=switchStats;
+        document.getElementById("stat1").innerHTML = stats.audioPlays;
+        document.getElementById("stat2").innerHTML = stats.audioWins;
+        if (stats.audioPlays != 0) {
+            document.getElementById("stat3").innerHTML = stats.audioWins/stats.audioPlays*100 + "%";
+        }
+
+        else {
+            document.getElementById("stat3").innerHTML = "0%";
+        }
+    }
+    for (i=0;i<currentBars.length;i++) {
+        let barHeight = 0;
+        if (sum != 0) {
+            barHeight = currentStats[i]/sum*maxBarHeight;
+        }
+        document.getElementById(currentBars[i]).style.height = barHeight + "px";
+    }
+    console.log(5)
+    document.getElementById("xButtonStats").style.display="block";
+    document.getElementById("audioSwapStats").style.display="block";
+    document.getElementById("classicSwapStats").style.display="block";
+
+
+}
+
+function switchStats() {
+    swapStats();
+    showStats();
+}
+
+function closeStats() {
+    document.getElementById("statNumbers").style.display="none";
+    if (currentStatsClassic) {
+        document.getElementById("statsC").style.display="none";
+        document.getElementById("cBars").style.display="none";
+        
+    }
+    else {
+        document.getElementById("statsA").style.display="none";
+        document.getElementById("hBars").style.display="none";
+    }
+    document.getElementById("xButtonStats").style.display="none";
+    document.getElementById("audioSwapStats").style.display="none";
+    document.getElementById("classicSwapStats").style.display="none";
 }
 
 function startClassic() {
@@ -308,12 +414,16 @@ function start() {
     document.getElementById("startDiv").style.display="none";
     document.getElementById("backButton").onclick=back;
     if (!heardle) {
-        document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
-        document.getElementById("label").style.display="block";
+        if (counter != 10) {
+            document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/10)";
+            document.getElementById("label").style.display="block";
+        }
     }
 
     else {
-        document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/5)";
+        if (counter != 5) {
+            document.getElementById("search").placeholder = "Enter a Drake Song (" + (counter+1) + "/5)";
+        }
         document.getElementById("playButton").style.display="inline-block";
         document.getElementById("heardleLabel").style.display="block";
         document.getElementById("rounds").style.display="block";
@@ -394,7 +504,7 @@ function read() {
 }
 
 function heardleValidSong(userSong, songInfo, a) {
-    if (!a) {
+    if (!a && daily) {
         stats.audioDailyGuesses.push(userSong);
         ss();
     }
@@ -423,6 +533,16 @@ function heardleValidSong(userSong, songInfo, a) {
                 stats.audioDistribution[counter]++;
                 ss();
             }
+
+            if (daily) {
+                if (currentStatsClassic) {
+                    swapStats();
+                }
+                setTimeout(function() {
+                    showStats();
+                }, 750)
+            }
+
             if (!daily) {
                 document.getElementById("startAgain").style.display="inline-block";
             }
@@ -441,7 +561,9 @@ function heardleValidSong(userSong, songInfo, a) {
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
             document.getElementById("playButton").onclick = null;
-            document.getElementById("startAgain").style.display="inline-block";
+            if (!daily) {
+                document.getElementById("startAgain").style.display="inline-block";
+            }
         }
 
         window.scrollTo({
@@ -452,7 +574,7 @@ function heardleValidSong(userSong, songInfo, a) {
 }
 
 function validSong(userSong, songInfo, a) {
-    if (!a) {
+    if (!a && daily) {
         stats.classicDailyGuesses.push(userSong);
         ss();
     }
@@ -515,6 +637,16 @@ function validSong(userSong, songInfo, a) {
                 stats.classicDistribution[counter]++;
                 ss();
             }
+
+            if (daily) {
+                if (!currentStatsClassic) {
+                    swapStats();
+                }
+                setTimeout(function() {
+                    showStats();
+                }, 750)
+            }
+
             if (!daily) {
                 document.getElementById("startAgain").style.display="inline-block";
             }
@@ -531,7 +663,9 @@ function validSong(userSong, songInfo, a) {
             document.getElementById("result").innerHTML="Better luck next time. The song was " + randSong;
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
-            document.getElementById("startAgain").style.display="inline-block";
+            if (!daily) {
+                document.getElementById("startAgain").style.display="inline-block";
+            }
         }
 
         window.scrollTo({
@@ -547,6 +681,9 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+let maxBarHeight=100;
+
 if (window.innerWidth <= 768) {
     document.getElementById("info").src = "images/infoVert.png";
+    maxBarHeight = 80;
 }
