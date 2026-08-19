@@ -729,6 +729,10 @@ document.getElementById("search").addEventListener("focus", function() {
         document.getElementById("dropdown").style.display = "block";
         updateDropdown();
     }
+    else if (!daily) {
+        document.getElementById("dropdown").style.display = "block";
+        updateDropdown();
+    }
 });
 
 document.getElementById("search").addEventListener("blur", () => {
