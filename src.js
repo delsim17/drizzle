@@ -542,6 +542,7 @@ function heardleValidSong(userSong, songInfo, a) {
         document.getElementById(guesses[counter]).innerHTML = "<span class='heardleSong'>" + userSong + "</span> <span id='heardleHint'><img src='" + hint + "'></span>";
         document.getElementById(guesses[counter]).style.display="block";
         if (userSong === randSong) {
+            document.getElementById("dropdown").style.display="none";
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
@@ -647,6 +648,7 @@ function validSong(userSong, songInfo, a) {
         document.querySelector("#arrow" + counter + "2 img").style.borderRadius = "50%";
 
         if (userSong === randSong) {
+            document.getElementById("dropdown").style.display="none";
             document.getElementById("result").innerHTML="You Win!";
             document.getElementById("result").style.display="block";
             document.getElementById("button").onclick = null;
@@ -701,7 +703,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 function updateDropdown() {
-    let input = document.getElementById("search").value.toUpperCase();
+    let input = document.getElementById("search").value.toUpperCase().trim();
 
     let matches = songs.filter(song =>
         song.toUpperCase().startsWith(input)
