@@ -444,6 +444,14 @@ function start() {
         illuminate(counter);
         mp3Song.src=musicAlbums[songInfo.x-1][songInfo.y-1];
     }
+
+    let search = document.getElementById("search");
+    let dropdown = document.getElementById("dropdown");
+
+    let rect = search.getBoundingClientRect();
+
+    dropdown.style.top = rect.bottom + "px";
+    dropdown.style.left = rect.left + 114 + "px";
 }
 
 function playSong() {
@@ -511,7 +519,7 @@ function read() {
         document.getElementById("search").value="";
     }
 
-
+    updateDropdown();
 }
 
 function heardleValidSong(userSong, songInfo, a) {
@@ -690,6 +698,44 @@ document.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         document.getElementById("button").click();
     }
+});
+
+function updateDropdown() {
+    let input = document.getElementById("search").value.toUpperCase();
+
+    let matches = songs.filter(song =>
+        song.toUpperCase().startsWith(input)
+    );
+
+    for (let i = 0; i < 3; i++) {
+        let button = document.getElementById(["one", "two", "three"][i]);
+
+        if (matches[i]) {
+            button.innerHTML = matches[i];
+            button.style.display = "block";
+        }
+        else {
+            button.style.display = "none";
+        }
+    }
+}
+
+document.getElementById("search").addEventListener("focus", function() {
+    document.getElementById("dropdown").style.display = "block";
+    updateDropdown();
+});
+
+document.getElementById("search").addEventListener("blur", () => {
+    document.getElementById("dropdown").style.display = "none";
+});
+
+function option(num) {
+    document.getElementById("search").value=document.getElementById(num).textContent;
+    read();
+}
+
+document.getElementById("search").addEventListener("input", function() {
+    updateDropdown();
 });
 
 let maxBarHeight=100;
